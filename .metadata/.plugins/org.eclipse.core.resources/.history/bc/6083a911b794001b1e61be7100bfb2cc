@@ -20,7 +20,6 @@ int main(void) {
 	int B;
 	int flighA=0;
 	int flighB=0;
-	int flighRetornos=0;
 	int opcionPrincipal;
 	int respuestaMenuPrincipal;
 	int resultado[3];
@@ -98,11 +97,6 @@ int main(void) {
 				else
 				{
 					printf("\nError, no se realizo la division\n");
-				}
-				if(flighRetornos==0)
-				{
-					flighA=0;
-					flighB=0;
 				}
 				break;
 			}

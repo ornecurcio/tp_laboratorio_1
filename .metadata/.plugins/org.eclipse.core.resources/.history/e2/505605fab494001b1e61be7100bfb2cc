@@ -11,7 +11,7 @@
 int sumar(int* pResultado, int numUno, int numDos);
 int restar(int* pResultado, int numUno, int numDos);
 int multiplicar(int* pResultado, int numUno, int numDos);
-int dividir(float* pResultado, int numUno, int numDos);
+int dividir(int* pResultado, int numUno, int numDos);
 int promediarArray(float* pPromedioResultado, int array[], int cantidadArray);
 
 #endif /* CALCULOS_H_ */

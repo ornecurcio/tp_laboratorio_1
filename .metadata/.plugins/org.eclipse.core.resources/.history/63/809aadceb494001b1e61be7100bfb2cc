@@ -20,7 +20,6 @@ int main(void) {
 	int B;
 	int flighA=0;
 	int flighB=0;
-	int flighRetornos=0;
 	int opcionPrincipal;
 	int respuestaMenuPrincipal;
 	int resultado[3];
@@ -44,7 +43,7 @@ int main(void) {
 			case 2:
 				if(flighA==0)
 				{
-					printf("\nError, primero debe ingresar el operando A\n");
+					printf("Error, primero debe ingresar el operando A");
 				}
 				else
 				{
@@ -56,7 +55,7 @@ int main(void) {
 			case 3:
 				if(flighA==0 || flighB==0)
 				{
-					printf("\nError, falta que ingrese un operando\n");
+					printf("Error, falta que ingrese un operando");
 				}
 				else
 				{
@@ -98,11 +97,6 @@ int main(void) {
 				else
 				{
 					printf("\nError, no se realizo la division\n");
-				}
-				if(flighRetornos==0)
-				{
-					flighA=0;
-					flighB=0;
 				}
 				break;
 			}

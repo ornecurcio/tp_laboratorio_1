@@ -203,3 +203,75 @@ collect2.exe: error: ld returned 1 exit status
 Info: Internal Builder is used for build
 gcc -o "Labo 1 Tp1.exe" "src\\Labo 1 Tp1.o" "src\\calculos.o" "src\\funcionesUTNyMenu.o" 
 Info: Nothing to build for Labo 1 Tp1
+16:35:26 **** Incremental Build of configuration Debug for project Labo 1 Tp1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo 1 Tp1.o" "..\\src\\Labo 1 Tp1.c" 
+..\src\Labo 1 Tp1.c: In function 'main':
+..\src\Labo 1 Tp1.c:65:26: warning: passing argument 1 of 'dividir' from incompatible pointer type [-Wincompatible-pointer-types]
+   65 |      retornos[3]=dividir(&resultadoDivision, A, B);
+      |                          ^~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          float *
+In file included from ..\src\Labo 1 Tp1.c:13:
+..\src\calculos.h:14:18: note: expected 'int *' but argument is of type 'float *'
+   14 | int dividir(int* pResultado, int numUno, int numDos);
+      |             ~~~~~^~~~~~~~~~
+gcc -o "Labo 1 Tp1.exe" "src\\Labo 1 Tp1.o" "src\\calculos.o" "src\\funcionesUTNyMenu.o" 
+16:40:23 **** Incremental Build of configuration Debug for project Labo 1 Tp1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo 1 Tp1.o" "..\\src\\Labo 1 Tp1.c" 
+..\src\Labo 1 Tp1.c: In function 'main':
+..\src\Labo 1 Tp1.c:65:26: warning: passing argument 1 of 'dividir' from incompatible pointer type [-Wincompatible-pointer-types]
+   65 |      retornos[3]=dividir(&resultadoDivision, A, B);
+      |                          ^~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          float *
+In file included from ..\src\Labo 1 Tp1.c:13:
+..\src\calculos.h:14:18: note: expected 'int *' but argument is of type 'float *'
+   14 | int dividir(int* pResultado, int numUno, int numDos);
+      |             ~~~~~^~~~~~~~~~
+gcc -o "Labo 1 Tp1.exe" "src\\Labo 1 Tp1.o" "src\\calculos.o" "src\\funcionesUTNyMenu.o" 
+Info: Nothing to build for Labo 1 Tp1
+16:42:04 **** Incremental Build of configuration Debug for project Labo 1 Tp1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo 1 Tp1.o" "..\\src\\Labo 1 Tp1.c" 
+..\src\Labo 1 Tp1.c: In function 'main':
+..\src\Labo 1 Tp1.c:65:26: warning: passing argument 1 of 'dividir' from incompatible pointer type [-Wincompatible-pointer-types]
+   65 |      retornos[3]=dividir(&resultadoDivision, A, B);
+      |                          ^~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          float *
+In file included from ..\src\Labo 1 Tp1.c:13:
+..\src\calculos.h:14:18: note: expected 'int *' but argument is of type 'float *'
+   14 | int dividir(int* pResultado, int numUno, int numDos);
+      |             ~~~~~^~~~~~~~~~
+gcc -o "Labo 1 Tp1.exe" "src\\Labo 1 Tp1.o" "src\\calculos.o" "src\\funcionesUTNyMenu.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Labo 1 Tp1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+16:42:17 **** Incremental Build of configuration Debug for project Labo 1 Tp1 ****
+Info: Internal Builder is used for build
+gcc -o "Labo 1 Tp1.exe" "src\\Labo 1 Tp1.o" "src\\calculos.o" "src\\funcionesUTNyMenu.o" 
+16:43:06 **** Incremental Build of configuration Debug for project Labo 1 Tp1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo 1 Tp1.o" "..\\src\\Labo 1 Tp1.c" 
+..\src\Labo 1 Tp1.c: In function 'main':
+..\src\Labo 1 Tp1.c:65:26: warning: passing argument 1 of 'dividir' from incompatible pointer type [-Wincompatible-pointer-types]
+   65 |      retornos[3]=dividir(&resultadoDivision, A, B);
+      |                          ^~~~~~~~~~~~~~~~~~
+      |                          |
+      |                          float *
+In file included from ..\src\Labo 1 Tp1.c:13:
+..\src\calculos.h:14:18: note: expected 'int *' but argument is of type 'float *'
+   14 | int dividir(int* pResultado, int numUno, int numDos);
+      |             ~~~~~^~~~~~~~~~
+gcc -o "Labo 1 Tp1.exe" "src\\Labo 1 Tp1.o" "src\\calculos.o" "src\\funcionesUTNyMenu.o" 
+16:47:34 **** Incremental Build of configuration Debug for project Labo 1 Tp1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo 1 Tp1.o" "..\\src\\Labo 1 Tp1.c" 
+gcc -o "Labo 1 Tp1.exe" "src\\Labo 1 Tp1.o" "src\\calculos.o" "src\\funcionesUTNyMenu.o" 
+Info: Nothing to build for Labo 1 Tp1
+16:59:18 **** Incremental Build of configuration Debug for project Labo 1 Tp1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo 1 Tp1.o" "..\\src\\Labo 1 Tp1.c" 
+gcc -o "Labo 1 Tp1.exe" "src\\Labo 1 Tp1.o" "src\\calculos.o" "src\\funcionesUTNyMenu.o" 
+Info: Nothing to build for Labo 1 Tp1
