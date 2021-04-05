@@ -86,4 +86,46 @@ int factorial(int* pResultado, int num)
 	*pResultado=0;
 	return retorno;
 }
+int imprimirArrayResultados(int listaDeArray[], int resultadosArray[], float resultadoDiv)
+	{
+		int retorno = -1;
+		do{
+		if(listaDeArray[0]==0)
+		{
+			printf("\nEl resultado de la suma es %d\n", resultadosArray[0]);
+		}
+		else
+		{
+			printf("\nError, no se realizo la suma\n");
+		}
+		if(listaDeArray[1]==0)
+		{
+			printf("\nEl resultado de la resta es %d\n", resultadosArray[1]);
+		}
+		else
+		{
+			printf("\nError, no se realizo la resta\n");
+		}
+		if(listaDeArray[2]==0)
+		{
+			printf("\nEl resultado de la multiplicacion es %d\n", resultadosArray[2]);
+		}
+		else
+		{
+			printf("\nError, no se realizo la multiplicacion\n");
+		}
+		if(listaDeArray[3]==0)
+		{
+			printf("\nEl resultado de la division es %.2f\n", resultadoDiv);
+		}
+		else
+		{
+			printf("\nError, no se realizo la division\n");
+		}
+		retorno=0;
+		}while(retorno==-1);
+
+		return retorno;
+	}
+
 
