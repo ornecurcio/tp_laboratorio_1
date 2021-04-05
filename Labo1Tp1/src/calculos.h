@@ -15,5 +15,5 @@ int dividir(float* pResultado, int numUno, int numDos);
 int promediarArray(float* pPromedioResultado, int array[], int cantidadArray);
 void imprimirArray(int listaDeArray[], int cantidadDeArray);
 int factorial(int* pResultado, int num);
-
+int imprimirArrayResultados(int listaDeArray[], int resultadosArray[], float resultadoDiv);
 #endif /* CALCULOS_H_ */

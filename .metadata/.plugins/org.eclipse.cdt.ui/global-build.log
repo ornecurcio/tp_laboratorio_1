@@ -1,4 +1,6 @@
-16:01:46 **** Incremental Build of configuration Debug for project mejoriaTp1 ****
+16:49:15 **** Incremental Build of configuration Debug for project mejoriaTp1 ****
 Info: Internal Builder is used for build
 gcc -o mejoriaTp1.exe "src\\calculos.o" "src\\funcionesUTNyMenu.o" "src\\mejoriaTp1.o" 
+Info: Nothing to build for mejoriaTp1
+Info: Nothing to build for mejoriaTp1
 Info: Nothing to build for mejoriaTp1

@@ -82,8 +82,33 @@ void imprimirArray(int listaDeArray[], int cantidadDeArray)
 	}
 int factorial(int* pResultado, int num)
 {
-	int retorno= 0;
-	*pResultado=0;
+	int retorno= -1;
+	int i;
+	*pResultado=1;
+	if(num==0)
+	{
+		*pResultado = 1;
+		retorno = 0;
+	}
+	else
+	{
+		if(num>0)
+		{
+			for(i=num; i>1; i--)
+			{
+				*pResultado=*pResultado*i;
+				retorno=0;
+			}
+		}
+		else
+		{
+			for(i=num; i<1; i++)
+			{
+				*pResultado=*pResultado*i;
+				retorno=0;
+			}
+		}
+	}
 	return retorno;
 }
 int imprimirArrayResultados(int listaDeArray[], int resultadosArray[], float resultadoDiv)
@@ -92,37 +117,46 @@ int imprimirArrayResultados(int listaDeArray[], int resultadosArray[], float res
 		do{
 		if(listaDeArray[0]==0)
 		{
-			printf("\nEl resultado de la suma es %d\n", resultadosArray[0]);
+			printf("El resultado de la suma es %d\n", resultadosArray[0]);
 		}
 		else
 		{
-			printf("\nError, no se realizo la suma\n");
+			printf("Error, no se realizo la suma\n");
 		}
 		if(listaDeArray[1]==0)
 		{
-			printf("\nEl resultado de la resta es %d\n", resultadosArray[1]);
+			printf("El resultado de la resta es %d\n", resultadosArray[1]);
 		}
 		else
 		{
-			printf("\nError, no se realizo la resta\n");
+			printf("Error, no se realizo la resta\n");
 		}
 		if(listaDeArray[2]==0)
 		{
-			printf("\nEl resultado de la multiplicacion es %d\n", resultadosArray[2]);
+			printf("El resultado de la multiplicacion es %d\n", resultadosArray[2]);
 		}
 		else
 		{
-			printf("\nError, no se realizo la multiplicacion\n");
+			printf("Error, no se realizo la multiplicacion\n");
 		}
 		if(listaDeArray[3]==0)
 		{
-			printf("\nEl resultado de la division es %.2f\n", resultadoDiv);
+			printf("El resultado de la division es %.2f\n", resultadoDiv);
 		}
 		else
 		{
-			printf("\nError, no se realizo la division\n");
+			printf("Error, no se realizo la division\n");
 		}
 		retorno=0;
+		if(listaDeArray[4]==0)
+		{
+			printf("El factorial de A es %d\n", resultadosArray[3]);
+		}
+		else
+		{
+			printf("Error, no se realizo factorial\n");
+		}
+
 		}while(retorno==-1);
 
 		return retorno;
