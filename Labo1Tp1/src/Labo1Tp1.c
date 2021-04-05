@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : mejoriaTp1.c
+ Name        : Labo1Tp1.c
  Author      : 
  Version     :
  Copyright   : Your copyright notice
