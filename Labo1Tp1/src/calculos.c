@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int sumar(int* pResultado, int numUno, int numDos)
+int utn_sumar(int* pResultado, int numUno, int numDos)
 {
 	int retorno = -1;
 
@@ -19,7 +19,7 @@ int sumar(int* pResultado, int numUno, int numDos)
 
 	return retorno;
 }
-int restar(int* pResultado, int numUno, int numDos)
+int utn_restar(int* pResultado, int numUno, int numDos)
 {
 	int retorno = -1;
 
@@ -31,7 +31,7 @@ int restar(int* pResultado, int numUno, int numDos)
 
 	return retorno;
 }
-int multiplicar(int* pResultado, int numUno, int numDos)
+int utn_multiplicar(int* pResultado, int numUno, int numDos)
 {
 	int retorno = -1;
 
@@ -43,7 +43,7 @@ int multiplicar(int* pResultado, int numUno, int numDos)
 
 	return retorno;
 }
-int dividir(float* pResultado, int numUno, int numDos)
+int utn_dividir(float* pResultado, int numUno, int numDos)
 {
 	int retorno = -1;
 
@@ -55,7 +55,7 @@ int dividir(float* pResultado, int numUno, int numDos)
 
 	return retorno;
 }
-int promediarArray(float* pPromedioResultado, int array[], int cantidadArray)
+int utn_promediarArray(float* pPromedioResultado, int array[], int cantidadArray)
 {
 	int retorno = -1;
 	int i;
@@ -73,14 +73,14 @@ int promediarArray(float* pPromedioResultado, int array[], int cantidadArray)
 	}
 	return retorno;
 }
-void imprimirArray(int listaDeArray[], int cantidadDeArray)
+void utn_imprimirArray(int listaDeArray[], int cantidadDeArray)
 	{	int i;
 		for(i=0; i<cantidadDeArray; i++)
 		{
 			printf("%d ", listaDeArray[i]);
 		}
 	}
-int factorial(int* pResultado, int num)
+int utn_factorial(int* pResultado, int num)
 {
 	int retorno= -1;
 	int i;

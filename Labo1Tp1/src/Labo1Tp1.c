@@ -60,12 +60,12 @@
 					}
 					else
 					{
-						retornos[0]=sumar(&resultado[0], A, B);
-						retornos[1]=restar(&resultado[1], A, B);
-						retornos[2]=multiplicar(&resultado[2], A, B);
-						retornos[3]=dividir(&resultadoDivision, A, B);
-						retornos[4]=factorial(&resultado[3], A);
-						retornos[5]=factorial(&resultado[4], B);
+						retornos[0]=utn_sumar(&resultado[0], A, B);
+						retornos[1]=utn_restar(&resultado[1], A, B);
+						retornos[2]=utn_multiplicar(&resultado[2], A, B);
+						retornos[3]=utn_dividir(&resultadoDivision, A, B);
+						retornos[4]=utn_factorial(&resultado[3], A);
+						retornos[5]=utn_factorial(&resultado[4], B);
 					}
 					break;
 				case 4:

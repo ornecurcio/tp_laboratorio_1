@@ -8,12 +8,12 @@
 #ifndef CALCULOS_H_
 #define CALCULOS_H_
 
-int sumar(int* pResultado, int numUno, int numDos);
-int restar(int* pResultado, int numUno, int numDos);
-int multiplicar(int* pResultado, int numUno, int numDos);
-int dividir(float* pResultado, int numUno, int numDos);
-int promediarArray(float* pPromedioResultado, int array[], int cantidadArray);
-void imprimirArray(int listaDeArray[], int cantidadDeArray);
-int factorial(int* pResultado, int num);
+int utn_sumar(int* pResultado, int numUno, int numDos);
+int utn_restar(int* pResultado, int numUno, int numDos);
+int utn_multiplicar(int* pResultado, int numUno, int numDos);
+int utn_dividir(float* pResultado, int numUno, int numDos);
+int utn_promediarArray(float* pPromedioResultado, int array[], int cantidadArray);
+void utn_imprimirArray(int listaDeArray[], int cantidadDeArray);
+int utn_factorial(int* pResultado, int num);
 int imprimirArrayResultados(int listaDeArray[], int resultadosArray[], float resultadoDiv);
 #endif /* CALCULOS_H_ */
