@@ -12,7 +12,7 @@
 #include "funcionesUTNyMenu.h"
 #include "calculos.h"
 
-#define RESULTADOS 5
+#define RESULTADOS 6
 
 	int main(void) {
 		setbuf(stdout, NULL);
@@ -23,7 +23,7 @@
 		int flighRetornos;
 		int opcionPrincipal;
 		int respuestaMenuPrincipal;
-		int resultado[4];
+		int resultado[5];
 		float resultadoDivision;
 		int retornos[RESULTADOS];
 
@@ -65,6 +65,7 @@
 						retornos[2]=multiplicar(&resultado[2], A, B);
 						retornos[3]=dividir(&resultadoDivision, A, B);
 						retornos[4]=factorial(&resultado[3], A);
+						retornos[5]=factorial(&resultado[4], B);
 					}
 					break;
 				case 4:

@@ -102,11 +102,7 @@ int factorial(int* pResultado, int num)
 		}
 		else
 		{
-			for(i=num; i<1; i++)
-			{
-				*pResultado=*pResultado*i;
-				retorno=0;
-			}
+			retorno = -1;
 		}
 	}
 	return retorno;
@@ -151,6 +147,14 @@ int imprimirArrayResultados(int listaDeArray[], int resultadosArray[], float res
 		if(listaDeArray[4]==0)
 		{
 			printf("El factorial de A es %d\n", resultadosArray[3]);
+		}
+		else
+		{
+			printf("Error, no se realizo factorial\n");
+		}
+		if(listaDeArray[4]==0)
+		{
+			printf("El factorial de B es %d\n", resultadosArray[4]);
 		}
 		else
 		{
