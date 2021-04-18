@@ -4,3 +4,10 @@ gcc -o mejoriaTp1.exe "src\\calculos.o" "src\\funcionesUTNyMenu.o" "src\\mejoria
 Info: Nothing to build for mejoriaTp1
 Info: Nothing to build for mejoriaTp1
 Info: Nothing to build for mejoriaTp1
+22:39:09 **** Rebuild of configuration Debug for project Labo1Tp1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo1Tp1.o" "..\\src\\Labo1Tp1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\calculos.o" "..\\src\\calculos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesUTNyMenu.o" "..\\src\\funcionesUTNyMenu.c" 
+gcc -o Labo1Tp1.exe "src\\Labo1Tp1.o" "src\\calculos.o" "src\\funcionesUTNyMenu.o" 
+Info: Nothing to build for Labo1Tp1
