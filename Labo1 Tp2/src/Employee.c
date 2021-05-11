@@ -160,9 +160,8 @@ int eEmployeesSort(eEmployee array[], int cantidadDeArray, int criterio)
 		switch(criterio)
 		{
 		case 1:
-			while(flagDesordenado==-1)
+			for(i=0; i<cantidadDeArray; i++)
 				{
-					flagDesordenado=0;
 					for(i=0; i<cantidadDeArray-1; i++)
 					{
 						if(array[i].sector<array[i+1].sector)
@@ -180,7 +179,6 @@ int eEmployeesSort(eEmployee array[], int cantidadDeArray, int criterio)
 									auxE = array[i];
 									array[i] = array[i+1];
 									array[i+1] = auxE;
-									flagDesordenado = -1;
 								}
 							}
 						}
@@ -308,26 +306,3 @@ int eEmployeesListSalary(eEmployee array[], int cantidadDeArray, float salary)
 
 	return retorno;
 }
-/*int getDescriptionSector(eEmployee array[], int posicion, char* descripcion)
-{
-	int retorno = -1;
-
-		if(array[posicion].isEmpty==0)
-		{
-			switch(array[posicion].sector)
-			{
-				case 1:
-					descripcion = "ADMISION";
-					break;
-				case 2:
-					descripcion = "SEGURIDAD";
-					break;
-				case 3:
-					descripcion = "ADMINISTRACION";
-					break;
-			}
-			retorno = 0;
-		}
-	return retorno;
-}
-*/

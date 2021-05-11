@@ -539,3 +539,9 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.cdt.core 1 0 2021-05-11 10:12:04.243
 !MESSAGE Indexed 'Labo1 Tp2' (0 sources, 0 headers) in 0,001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.codan.core.cxx 4 1 2021-05-11 10:48:39.434
+!MESSAGE Unsupported statement type: CASTCaseStatement.
+
+!ENTRY org.eclipse.cdt.codan.core.cxx 4 1 2021-05-11 10:48:52.553
+!MESSAGE Unsupported statement type: CASTCaseStatement.
