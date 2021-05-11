@@ -136,7 +136,7 @@ int removeEmployee(eEmployee aAuxiliar[], int posicion)
 {
 	int retorno = -1;
 	char respuesta;
-	if(aAuxiliar!=NULL)
+	if(aAuxiliar!=NULL && posicion!=-1)
 	{
 		print1Employee(aAuxiliar[posicion]);
 		printf("\nDesea borrar ese empleado, ingrese 's'");
@@ -154,67 +154,61 @@ int eEmployeesSort(eEmployee array[], int cantidadDeArray, int criterio)
 {
 		int flagDesordenado = -1;
 		int i;
-		eEmployee auxE;
+		eEmployee aux;
 		int retorno=-1;
 
-		switch(criterio)
+		if(array!=NULL && cantidadDeArray>0)
 		{
-		case 1:
-			for(i=0; i<cantidadDeArray; i++)
+			do {
+				flagDesordenado=0;
+				for (i = 0; i < cantidadDeArray-1; ++i)
 				{
-					for(i=0; i<cantidadDeArray-1; i++)
+					if(criterio == 0)
 					{
-						if(array[i].sector<array[i+1].sector)
-						{
-							auxE = array[i];
-							array[i] = array[i+1];
-							array[i+1] = auxE;
+							if(strcmp(array[i].lastName,array[i+1].lastName)>0)
+							{
+								flagDesordenado=1;
+								aux=array[i];
+								array[i]=array[i+1];
+								array[i+1]=aux;
+							}
+							else
+							{
+									if(strcmp(array[i].lastName,array[i+1].lastName)==0 && array[i].sector > array[i+1].sector)
+									{
+										flagDesordenado=1;
+										aux=array[i];
+										array[i]=array[i+1];
+										array[i+1]=aux;
+									}
+							}
 						}
 						else
 						{
-							if(array[i].sector==array[i+1].sector)
+							if(criterio == 1)
 							{
-								if(strcmp(array[i].lastName,array[i+1].lastName)>0)
+								if(strcmp(array[i+1].lastName,array[i].lastName)>0)
 								{
-									auxE = array[i];
-									array[i] = array[i+1];
-									array[i+1] = auxE;
+									flagDesordenado=1;
+									aux=array[i];
+									array[i]=array[i+1];
+									array[i+1]=aux;
+								}
+								else
+								{
+									if(strcmp(array[i].lastName,array[i+1].lastName)==0 && array[i+1].sector > array[i].sector)
+									{
+										flagDesordenado=1;
+										aux=array[i];
+										array[i]=array[i+1];
+										array[i+1]=aux;
+									}
 								}
 							}
 						}
 					}
-				}
-				retorno = 0;
-				break;
-		case 0:
-			while(flagDesordenado==-1)
-				{
-					flagDesordenado=0;
-					for(i=0; i<cantidadDeArray-1; i++)
-					{
-						if(array[i].sector>array[i+1].sector)
-						{
-							auxE = array[i];
-							array[i] = array[i+1];
-							array[i+1] = auxE;
-						}
-						else
-						{
-							if(array[i].sector==array[i+1].sector)
-							{
-								if(strcmp(array[i].lastName,array[i+1].lastName)>0)// compara los array.
-								{
-									auxE = array[i];
-									array[i] = array[i+1];
-									array[i+1] = auxE;
-									flagDesordenado = -1;
-								}
-							}
-						}
-					}
-				}
-				retorno = 0;
-				break;
+				} while (flagDesordenado==0);
+				retorno=0;
 		}
 		return retorno;
 }
@@ -223,7 +217,7 @@ int modify1Employee(eEmployee aAuxiliar[], int posicion)
 {
 	int retorno = -1;
 	int respuesta;
-	if(aAuxiliar!=NULL)
+	if(aAuxiliar!=NULL && posicion!=-1)
 	{
 				print1Employee(aAuxiliar[posicion]);
 				printf("\n¿Desea modificar este empleado?");
@@ -297,9 +291,12 @@ int eEmployeesListSalary(eEmployee array[], int cantidadDeArray, float salary)
 	{
 		for(i=0; i<cantidadDeArray; i++)
 		{
-			if(array[i].salary>=salary)
+			if(array[i].isEmpty==0)
 			{
-				print1Employee(array[i]);
+				if(array[i].salary>=salary)
+				{
+					print1Employee(array[i]);
+				}
 			}
 		}
 	}

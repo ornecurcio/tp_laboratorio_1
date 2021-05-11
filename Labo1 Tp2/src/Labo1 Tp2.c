@@ -22,10 +22,6 @@ int main(void) {
 	eEmployee vecEmpleados[QTY_EMPLOYEE];
 	int contadorEmpleados=0;
 	int submenu;
-	//int B;
-	//int flighA=0;
-	//int flighB=0;
-	//int flighRetornos;
 	int auxInt;
 	int respuestaMenuPrincipal;
 	float auxFloat;
@@ -43,7 +39,6 @@ int main(void) {
 					{
 						printf("Carga exitosa\n");
 					}
-					printEmployees(vecEmpleados, QTY_EMPLOYEE);
 					break;
 				case 2://MODIFICAR
 					if(contadorEmpleados==0)

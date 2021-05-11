@@ -1,5 +1,5 @@
-10:36:51 **** Incremental Build of configuration Debug for project Labo1 Tp2 ****
+11:29:52 **** Incremental Build of configuration Debug for project Labo1 Tp2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo1 Tp2.o" "..\\src\\Labo1 Tp2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Employee.o" "..\\src\\Employee.c" 
 gcc -o "Labo1 Tp2.exe" "src\\Biblioteca.o" "src\\Employee.o" "src\\Labo1 Tp2.o" 
 Info: Nothing to build for Labo1 Tp2
