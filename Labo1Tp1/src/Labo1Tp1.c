@@ -69,7 +69,7 @@
 					}
 					break;
 				case 4:
-					if(flighA==0 || flighB==0 || retornos==0)
+					if(flighA==0 || flighB==0 || retornos!=0)
 					{
 						printf("Error, falta que ingrese un operando o que ejecute la opcion 3\n");
 					}
