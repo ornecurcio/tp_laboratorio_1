@@ -39,5 +39,8 @@ int printEmployees(eEmployee array[], int cantidadDeArray);
 
 int modify1Employee(eEmployee aAuxiliar[], int posicion);
 
+int eEmployeePromSalary(float* pPromedioResultado, eEmployee array[], int cantidadDeArray);
+
+int eEmployeesListSalary(eEmployee array[], int cantidadDeArray, float salary);
 //int getDescriptionSector(eEmployee array[], int posicion, char* descripcion);
 #endif /* EMPLOYEE_H_ */

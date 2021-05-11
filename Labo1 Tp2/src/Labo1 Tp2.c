@@ -28,6 +28,7 @@ int main(void) {
 	//int flighRetornos;
 	int auxInt;
 	int respuestaMenuPrincipal;
+	float auxFloat;
 
 	initEmployees(vecEmpleados, QTY_EMPLOYEE);
 	do{
@@ -74,26 +75,21 @@ int main(void) {
 						do{
 							if(utn_getNumero(&submenu, "\n1.Informar empleados \n2.Listado de empleados con salario mayor al promedio\n3.Salir", "Error, Ingrese una opcion del 1 o 2.", 1, 3, 2)==0)
 							{
-								switch(submenu)
-								{
-									case 1:
-										printf("Ingrese criterio ascendente 1 o descendente 0");
-										scanf("%d", &auxInt);
-										while(auxInt!=1 || auxInt!=0 || isdigit(auxInt)==0)
-										{
+									switch(submenu)
+									{
+										case 1:
 											printf("Ingrese criterio ascendente 1 o descendente 0");
 											scanf("%d", &auxInt);
-										}
-										eEmployeesSort(vecEmpleados, QTY_EMPLOYEE,auxInt);
-										printEmployees(vecEmpleados, QTY_EMPLOYEE);
-										break;
-									case 2:
-
-										break;
-								}
-								retorno=0;
-							}
-						}while(submenu!=3);
+											eEmployeesSort(vecEmpleados, QTY_EMPLOYEE,auxInt);
+											printEmployees(vecEmpleados, QTY_EMPLOYEE);
+											break;
+										case 2:
+											eEmployeePromSalary(&auxFloat, vecEmpleados, QTY_EMPLOYEE);
+											eEmployeesListSalary(vecEmpleados, QTY_EMPLOYEE, auxFloat);
+											break;
+									 }
+							  }
+							}while(submenu!=3);
 					}
 					break;
 			}

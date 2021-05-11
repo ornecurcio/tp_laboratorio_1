@@ -267,6 +267,47 @@ int modify1Employee(eEmployee aAuxiliar[], int posicion)
 		}
 	return retorno;
 }
+int eEmployeePromSalary(float* pPromedioResultado, eEmployee array[], int cantidadDeArray)
+{
+	int retorno = -1;
+	int i;
+	int acumulador=0;
+	int contador=0;
+
+	if(pPromedioResultado != NULL && array!=NULL && cantidadDeArray>0)
+	{
+		for(i=0; i<cantidadDeArray; i++)
+		{
+			if(array[i].isEmpty==0)
+			{
+			acumulador =+ array[i].salary;
+			contador++;
+			}
+		}
+		*pPromedioResultado = acumulador/contador;
+		printf("El salario promedio es: %.2f", *pPromedioResultado);
+		retorno = 0;
+	}
+	return retorno;
+}
+int eEmployeesListSalary(eEmployee array[], int cantidadDeArray, float salary)
+{
+	int retorno=-1;
+	int i;
+
+	if(array!=NULL && cantidadDeArray>0)
+	{
+		for(i=0; i<cantidadDeArray; i++)
+		{
+			if(array[i].salary>=salary)
+			{
+				print1Employee(array[i]);
+			}
+		}
+	}
+
+	return retorno;
+}
 /*int getDescriptionSector(eEmployee array[], int posicion, char* descripcion)
 {
 	int retorno = -1;
