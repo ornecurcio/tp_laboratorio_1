@@ -9,6 +9,7 @@
 #include <string.h>
 #include <ctype.h>
 
+
 void getChar(char* mensaje, char* rta)
 {
 	printf("%s", mensaje);

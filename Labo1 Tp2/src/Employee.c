@@ -43,34 +43,10 @@ int findLibre(eEmployee pArray[], int cantidadDeArray)
 	}
 	return retorno;
 }
-eEmployee upDataEmployee(void)
-{
-	eEmployee aAuxiliar;
-	int respuesta;
-
-	do{
-		if((utn_getString(aAuxiliar.lastName, "Ingrese Apellido", "Error, ingrese Apellido", 2)==0)&&
-		(utn_getString(aAuxiliar.name, "Ingrese Nombre", "Error, ingrese Nombre", 2)==0)&&
-		(utn_getNumeroConDecimales(&aAuxiliar.salary,"Ingrese salario","Error, ingrese salario entre 300-3000",300,3000,2)==0)&&
-		(utn_getNumero(&aAuxiliar.sector, "Ingrese sector","Error, ingrese sector de 1 a 20", 1, 20, 2)==0))
-		{
-			aAuxiliar.isEmpty=0;
-			aAuxiliar.idEmployee=0;
-		}
-		else
-		{
-			printf("Error al cargar empleado, desea internarlo nuevamente?");
-			respuesta=utn_getCaracterSN();
-		}
-	}while(respuesta==0);
-
-	return aAuxiliar;
-}
-
 int addEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId)
 {
-	eEmployee aAuxiliar;
 	int retorno = -1;
+	eEmployee aAuxiliar;
 	int posicion;
 	if(aEmployee!=NULL && cantidadDeArray>0 && contadorId!=NULL)
 	{
@@ -81,17 +57,23 @@ int addEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId)
 		}
 		else
 		{
-				aAuxiliar=upDataEmployee();
-
+			if((utn_getString(aAuxiliar.lastName, "Ingrese Apellido", "Error, ingrese Apellido", 2)==0)&&
+			(utn_getString(aAuxiliar.name, "Ingrese Nombre", "Error, ingrese Nombre", 2)==0)&&
+			(utn_getNumeroConDecimales(&aAuxiliar.salary,"Ingrese salario","Error, ingrese salario entre 300-3000",300,3000,2)==0)&&
+			(utn_getNumero(&aAuxiliar.sector, "Ingrese sector","Error, ingrese sector de 1 a 20", 1, 20, 2)==0))
+			{
+				aAuxiliar.idEmployee=0;
 				printf("Estos son los datos, desea continuar:");
 				print1Employee(aAuxiliar);
 				if(utn_getCaracterSN()==0)
 				{
 				   (*contadorId)++;
 				   aAuxiliar.idEmployee=*contadorId;
+				   aAuxiliar.isEmpty=0;
 				   aEmployee[posicion]=aAuxiliar;
 				   retorno=0;
 				}
+			}
 		}
 	}
 		return retorno;
@@ -99,6 +81,31 @@ int addEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId)
 void print1Employee(eEmployee aEmpleado)
 {
 	printf("\n %-5d  %-10s %-10s %-5d %-5.2f ", aEmpleado.idEmployee, aEmpleado.lastName, aEmpleado.name, aEmpleado.sector, aEmpleado.salary);
+}
+int printEmployees(eEmployee array[], int cantidadDeArray)
+{
+	int i;
+	int retorno = -1;
+
+	//CABECERA
+	puts("\n\t> LISTADO Empleados");
+	printf("%5s %10s %10s %8s %5s\n", "ID","APELLIDO","NOMBRE","SECTOR","SUELDO");
+	if (array != NULL && cantidadDeArray> 0)
+	{
+		for (i = 0; i < cantidadDeArray; i++)
+		{
+			if (array[i].isEmpty == 1)
+			{
+				continue;
+			}
+			else
+			{
+				print1Employee(array[i]);
+				retorno=0;
+			}
+		}
+	}
+	return retorno;
 }
 int findEmployeeById(eEmployee aAuxiliar[], int cantidadDeArray)
 {
@@ -109,7 +116,6 @@ int findEmployeeById(eEmployee aAuxiliar[], int cantidadDeArray)
 	{
 		printf("Ingrese ID");
 		scanf("%d", &aID);
-
 		for(i=0; i<cantidadDeArray; i++)
 		{
 			if(aAuxiliar[i].idEmployee==aID && aAuxiliar[i].isEmpty==0)
@@ -119,7 +125,7 @@ int findEmployeeById(eEmployee aAuxiliar[], int cantidadDeArray)
 			}
 			else
 			{
-				printf("El numero de %d ID no existe", aID);
+				printf("El numero de ID %d no existe", aID);
 				break;
 			}
 		}
@@ -130,7 +136,6 @@ int removeEmployee(eEmployee aAuxiliar[], int posicion)
 {
 	int retorno = -1;
 	char respuesta;
-	char descripcion[20];
 	if(aAuxiliar!=NULL)
 	{
 		print1Employee(aAuxiliar[posicion]);
@@ -215,28 +220,7 @@ int eEmployeesSort(eEmployee array[], int cantidadDeArray, int criterio)
 		}
 		return retorno;
 }
-int printEmployees(eEmployee array[], int cantidadDeArray)
-{
-	int i;
-	int retorno = -1;
-	char descripcion[20];
-	//CABECERA
-	puts("\n\t> LISTADO Empleados");
-	printf("%5s %10s %10s %10s %5s\n\n", "ID","APELLIDO","NOMBRE","SECTOR","SUELDO");
 
-	if (array != NULL && cantidadDeArray> 0)
-	{
-		for (i = 0; i < cantidadDeArray; i++)
-		{
-			if (array[i].isEmpty == 0)
-			{
-				print1Employee(array[i]);
-				retorno=0;
-			}
-		}
-	}
-	return retorno;
-}
 int modify1Employee(eEmployee aAuxiliar[], int posicion)
 {
 	int retorno = -1;

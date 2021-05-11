@@ -25,8 +25,6 @@ int initEmployees(eEmployee pArray[], int cantidadDeArray);
 
 int findLibre(eEmployee pArray[], int cantidadDeArray);
 
-eEmployee upDataEmployee(void);
-
 int addEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId);
 
 void print1Employee(eEmployee aEmpleado);

@@ -24,4 +24,5 @@ int utn_getCaracter(char* pResultado,char* mensaje,char* mensajeError,char minim
 int utn_getCaracterSN();
 
 
+
 #endif /* BIBLIOTECA_H_ */
