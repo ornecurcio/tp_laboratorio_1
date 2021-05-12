@@ -26,7 +26,7 @@ int main(void) {
 	int respuestaMenuPrincipal;
 	float auxFloat;
 
-	initEmployees(vecEmpleados, QTY_EMPLOYEE);
+	inicializarEmpleado(vecEmpleados, QTY_EMPLOYEE);
 	do{
 		if(utn_getNumero(&respuestaMenuPrincipal,"Seleccione una opcion\n1.Ingresar 1 Empleado\n2.Modificar\n3.Dar de baja\n4.Informes\n5.Salir",
 				"Error ingrese: \n1.Ingresar un empleado\n2.Modificar\n3.Dar de baja\n4.Informes\n5.Salir", 1, 5, 2)==0)
@@ -35,7 +35,7 @@ int main(void) {
 			switch(respuestaMenuPrincipal)
 			{
 				case 1: //ALTA
-					if(addEmployee(vecEmpleados, QTY_EMPLOYEE, &contadorEmpleados)==0)
+					if(altaEmployee(vecEmpleados, QTY_EMPLOYEE, &contadorEmpleados)==0)
 					{
 						printf("Carga exitosa\n");
 					}
@@ -47,7 +47,7 @@ int main(void) {
 					}
 					else
 					{
-						modify1Employee(vecEmpleados,findEmployeeById(vecEmpleados, QTY_EMPLOYEE));
+						modifica1Employee(vecEmpleados,buscaEmployeeById(vecEmpleados, QTY_EMPLOYEE));
 					}
 					break;
 				case 3://BAJA
@@ -57,7 +57,7 @@ int main(void) {
 					}
 					else
 					{
-						removeEmployee(vecEmpleados, findEmployeeById(vecEmpleados, QTY_EMPLOYEE));
+						bajaEmployee(vecEmpleados, buscaEmployeeById(vecEmpleados, QTY_EMPLOYEE));
 					}
 					break;
 				case 4:
@@ -75,12 +75,12 @@ int main(void) {
 										case 1:
 											printf("Ingrese criterio ascendente 1 o descendente 0");
 											scanf("%d", &auxInt);
-											eEmployeesSort(vecEmpleados, QTY_EMPLOYEE,auxInt);
-											printEmployees(vecEmpleados, QTY_EMPLOYEE);
+											ordenarEmployees(vecEmpleados, QTY_EMPLOYEE,auxInt);
+											imprimirEmployees(vecEmpleados, QTY_EMPLOYEE);
 											break;
 										case 2:
-											eEmployeePromSalary(&auxFloat, vecEmpleados, QTY_EMPLOYEE);
-											eEmployeesListSalary(vecEmpleados, QTY_EMPLOYEE, auxFloat);
+											eEmployeePromSalario(&auxFloat, vecEmpleados, QTY_EMPLOYEE);
+											eEmployeesListaSalario(vecEmpleados, QTY_EMPLOYEE, auxFloat);
 											break;
 									 }
 							  }

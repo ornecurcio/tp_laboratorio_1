@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int initEmployees(eEmployee pArray[], int cantidadDeArray)
+int inicializarEmpleado(eEmployee pArray[], int cantidadDeArray)
 {
 	int retorno = -1;
 	int i;
@@ -24,7 +24,7 @@ int initEmployees(eEmployee pArray[], int cantidadDeArray)
 	}
 	return retorno;
 }
-int findLibre(eEmployee pArray[], int cantidadDeArray)
+int buscaLibre(eEmployee pArray[], int cantidadDeArray)
 {
 	int retorno = -1;
 	int i;
@@ -43,14 +43,14 @@ int findLibre(eEmployee pArray[], int cantidadDeArray)
 	}
 	return retorno;
 }
-int addEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId)
+int altaEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId)
 {
 	int retorno = -1;
 	eEmployee aAuxiliar;
 	int posicion;
 	if(aEmployee!=NULL && cantidadDeArray>0 && contadorId!=NULL)
 	{
-		posicion=findLibre(aEmployee, cantidadDeArray);
+		posicion=buscaLibre(aEmployee, cantidadDeArray);
 		if(posicion==-1)
 		{
 			printf("\nNo hay lugares libres");
@@ -64,7 +64,7 @@ int addEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId)
 			{
 				aAuxiliar.idEmployee=0;
 				printf("Estos son los datos, desea continuar:");
-				print1Employee(aAuxiliar);
+				imprimir1Employee(aAuxiliar);
 				if(utn_getCaracterSN()==0)
 				{
 				   (*contadorId)++;
@@ -78,11 +78,11 @@ int addEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId)
 	}
 		return retorno;
 }
-void print1Employee(eEmployee aEmpleado)
+void imprimir1Employee(eEmployee aEmpleado)
 {
 	printf("\n %-5d  %-10s %-10s %-5d %-5.2f ", aEmpleado.idEmployee, aEmpleado.lastName, aEmpleado.name, aEmpleado.sector, aEmpleado.salary);
 }
-int printEmployees(eEmployee array[], int cantidadDeArray)
+int imprimirEmployees(eEmployee array[], int cantidadDeArray)
 {
 	int i;
 	int retorno = -1;
@@ -100,14 +100,14 @@ int printEmployees(eEmployee array[], int cantidadDeArray)
 			}
 			else
 			{
-				print1Employee(array[i]);
+				imprimir1Employee(array[i]);
 				retorno=0;
 			}
 		}
 	}
 	return retorno;
 }
-int findEmployeeById(eEmployee aAuxiliar[], int cantidadDeArray)
+int buscaEmployeeById(eEmployee aAuxiliar[], int cantidadDeArray)
 {
 	int retorno = -1;
 	int i;
@@ -132,13 +132,13 @@ int findEmployeeById(eEmployee aAuxiliar[], int cantidadDeArray)
 	}
 	return retorno;
 }
-int removeEmployee(eEmployee aAuxiliar[], int posicion)
+int bajaEmployee(eEmployee aAuxiliar[], int posicion)
 {
 	int retorno = -1;
 	char respuesta;
 	if(aAuxiliar!=NULL && posicion!=-1)
 	{
-		print1Employee(aAuxiliar[posicion]);
+		imprimir1Employee(aAuxiliar[posicion]);
 		printf("\nDesea borrar ese empleado, ingrese 's'");
 		fflush(stdin);
 		scanf("%c", &respuesta);
@@ -150,7 +150,7 @@ int removeEmployee(eEmployee aAuxiliar[], int posicion)
 	}
 	return retorno;
 }
-int eEmployeesSort(eEmployee array[], int cantidadDeArray, int criterio)
+int ordenarEmployees(eEmployee array[], int cantidadDeArray, int criterio)
 {
 		int flagDesordenado = -1;
 		int i;
@@ -213,13 +213,13 @@ int eEmployeesSort(eEmployee array[], int cantidadDeArray, int criterio)
 		return retorno;
 }
 
-int modify1Employee(eEmployee aAuxiliar[], int posicion)
+int modifica1Employee(eEmployee aAuxiliar[], int posicion)
 {
 	int retorno = -1;
 	int respuesta;
 	if(aAuxiliar!=NULL && posicion!=-1)
 	{
-				print1Employee(aAuxiliar[posicion]);
+				imprimir1Employee(aAuxiliar[posicion]);
 				printf("\n¿Desea modificar este empleado?");
 				if(utn_getCaracterSN()==0)
 				{
@@ -235,23 +235,23 @@ int modify1Employee(eEmployee aAuxiliar[], int posicion)
 						case 1:
 							utn_getString(aAuxiliar[posicion].lastName, "Ingrese Apellido", "Error, ingrese Apellido", 1);
 							printf("Exito, los nuevos datos son: ");
-							print1Employee(aAuxiliar[posicion]);
+							imprimir1Employee(aAuxiliar[posicion]);
 							break;
 						case 2:
 							utn_getString(aAuxiliar[posicion].name, "Ingrese Nombre", "Error, ingrese Nombre", 1);
 							printf("Exito, los nuevos datos son: ");
-							print1Employee(aAuxiliar[posicion]);
+							imprimir1Employee(aAuxiliar[posicion]);
 							break;
 						case 3:
 							utn_getNumeroConDecimales(&aAuxiliar[posicion].salary,"Ingrese salario","Error, ingrese salario entre 300-3000",300,3000,1);
 							printf("Exito, los nuevos datos son: ");
-							print1Employee(aAuxiliar[posicion]);
+							imprimir1Employee(aAuxiliar[posicion]);
 							break;
 						case 4:
 							utn_getNumero(&aAuxiliar[posicion].sector, "Ingrese sector: 1.ADMISION, 2.SEGURIDAD, 3.ADMINISTRACION",
 									"Error, ingrese: 1.Admision, 2.Seguridad, 3.Administracion", 1, 3, 1);
 							printf("Exito, los nuevos datos son: ");
-							print1Employee(aAuxiliar[posicion]);
+							imprimir1Employee(aAuxiliar[posicion]);
 							break;
 					}
 					retorno = 0;
@@ -259,7 +259,7 @@ int modify1Employee(eEmployee aAuxiliar[], int posicion)
 		}
 	return retorno;
 }
-int eEmployeePromSalary(float* pPromedioResultado, eEmployee array[], int cantidadDeArray)
+int eEmployeePromSalario(float* pPromedioResultado, eEmployee array[], int cantidadDeArray)
 {
 	int retorno = -1;
 	int i;
@@ -282,7 +282,7 @@ int eEmployeePromSalary(float* pPromedioResultado, eEmployee array[], int cantid
 	}
 	return retorno;
 }
-int eEmployeesListSalary(eEmployee array[], int cantidadDeArray, float salary)
+int eEmployeesListaSalario(eEmployee array[], int cantidadDeArray, float salary)
 {
 	int retorno=-1;
 	int i;
@@ -295,7 +295,7 @@ int eEmployeesListSalary(eEmployee array[], int cantidadDeArray, float salary)
 			{
 				if(array[i].salary>=salary)
 				{
-					print1Employee(array[i]);
+					imprimir1Employee(array[i]);
 				}
 			}
 		}

@@ -21,26 +21,42 @@ typedef struct
 	int isEmpty;
 }eEmployee;
 
-int initEmployees(eEmployee pArray[], int cantidadDeArray);
+/** \brief  inicializa en el campo isEmpty en 1, libre
+* \param pArray el puntero al primer array
+* \param cantidadDeArray int, a recorrer
+* \return int Returo (-1) si Error (0) si todo Ok
+*/
+int inicializarEmpleado(eEmployee pArray[], int cantidadDeArray);
+/** \brief  busca en el campo isEmpty del array, un 1 para ingresar datos
+* \param pArray el puntero al primer array
+* \param cantidadDeArray int, a recorrer
+* \return int Retorno (-1) si Error, retorna un int de posicion si todo Ok
+*/
+int buscaLibre(eEmployee pArray[], int cantidadDeArray);
+/** \brief alta un empleado, llama a otras funciones que valida los datos de cada campo a cargar
+* \param aEmployee array donde se cargan los datos
+* \param cantidadDeArray int, recorrer array
+* \param contadorId int como puntero, donde se cargara el ID de manera autoincremental
+* \return int Retorno (-1) si ERROR (0) SI TODO Ok
+*/
+int altaEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId);
+/** \brief imprime un empleado
+* \param aEmpleado, recibe por valor la estructura de un empleado
+*/
+void imprimir1Employee(eEmployee aEmpleado);
 
-int findLibre(eEmployee pArray[], int cantidadDeArray);
+int buscaEmployeeById(eEmployee aAuxiliar[], int cantidadDeArray);
 
-int addEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId);
+int bajaEmployee(eEmployee aAuxiliar[], int posicion);
 
-void print1Employee(eEmployee aEmpleado);
+int ordenarEmployees(eEmployee array[], int cantidadDeArray, int criterio);
 
-int findEmployeeById(eEmployee aAuxiliar[], int cantidadDeArray);
+int imprimirEmployees(eEmployee array[], int cantidadDeArray);
 
-int removeEmployee(eEmployee aAuxiliar[], int posicion);
+int modifica1Employee(eEmployee aAuxiliar[], int posicion);
 
-int eEmployeesSort(eEmployee array[], int cantidadDeArray, int criterio);
+int eEmployeePromSalario(float* pPromedioResultado, eEmployee array[], int cantidadDeArray);
 
-int printEmployees(eEmployee array[], int cantidadDeArray);
-
-int modify1Employee(eEmployee aAuxiliar[], int posicion);
-
-int eEmployeePromSalary(float* pPromedioResultado, eEmployee array[], int cantidadDeArray);
-
-int eEmployeesListSalary(eEmployee array[], int cantidadDeArray, float salary);
+int eEmployeesListaSalario(eEmployee array[], int cantidadDeArray, float salary);
 
 #endif /* EMPLOYEE_H_ */
