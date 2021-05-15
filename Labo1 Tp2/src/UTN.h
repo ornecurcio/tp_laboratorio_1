@@ -112,6 +112,8 @@ int utn_getNombre(char* mensaje, char* mensajeError, char* pResultado,int reinte
  * NO PUEDO CRRER Q LLEGASTE HASTA ACA! APLAUSOS! TE MERECES UN CAFE
  */
 int utn_getCaracter(char* pResultado,char* mensaje,char* mensajeError,char minimo,char maximo,int reintentos);
+
+int utn_getCaracterSexo(char* pResultado,char* mensaje,char* mensajeError, char string[][20], int cantidadArray, int reintentos);
 //======== SORRY aca ya me canse de escribir, pero tienen nombre claro mis funciones :)
 int inicializarArrayFlotante(float pArray[], int cantidadDeArray);
 int imprimirArrayFlotante(float pArray[], int cantidadDeArray);

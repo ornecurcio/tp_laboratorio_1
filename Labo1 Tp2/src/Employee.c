@@ -5,7 +5,7 @@
  *      Author: orne_
  */
 #include "Employee.h"
-#include "Biblioteca.h"
+#include "UTN.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -59,7 +59,7 @@ int altaEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId)
 		{
 			if((utn_getString(aAuxiliar.lastName, "Ingrese Apellido", "Error, ingrese Apellido", 2)==0)&&
 			(utn_getString(aAuxiliar.name, "Ingrese Nombre", "Error, ingrese Nombre", 2)==0)&&
-			(utn_getNumeroConDecimales(&aAuxiliar.salary,"Ingrese salario","Error, ingrese salario entre 300-3000",300,3000,2)==0)&&
+			(utn_getNumeroFlotante(&aAuxiliar.salary,"Ingrese salario","Error, ingrese salario entre 300-3000",300,3000,2)==0)&&
 			(utn_getNumero(&aAuxiliar.sector, "Ingrese sector","Error, ingrese sector de 1 a 20", 1, 20, 2)==0))
 			{
 				aAuxiliar.idEmployee=0;
@@ -82,7 +82,7 @@ void imprimir1Employee(eEmployee aEmpleado)
 {
 	printf("\n %-5d  %-10s %-10s %-5d %-5.2f ", aEmpleado.idEmployee, aEmpleado.lastName, aEmpleado.name, aEmpleado.sector, aEmpleado.salary);
 }
-int imprimirEmployees(eEmployee array[], int cantidadDeArray)
+int imprimirEmployees(eEmployee aEmpleado[], int cantidadDeArray)
 {
 	int i;
 	int retorno = -1;
@@ -90,17 +90,17 @@ int imprimirEmployees(eEmployee array[], int cantidadDeArray)
 	//CABECERA
 	puts("\n\t> LISTADO Empleados");
 	printf("%5s %10s %10s %8s %5s\n", "ID","APELLIDO","NOMBRE","SECTOR","SUELDO");
-	if (array != NULL && cantidadDeArray> 0)
+	if (aEmpleado != NULL && cantidadDeArray> 0)
 	{
 		for (i = 0; i < cantidadDeArray; i++)
 		{
-			if (array[i].isEmpty == 1)
+			if (aEmpleado[i].isEmpty == 1)
 			{
 				continue;
 			}
 			else
 			{
-				imprimir1Employee(array[i]);
+				imprimir1Employee(aEmpleado[i]);
 				retorno=0;
 			}
 		}
@@ -150,36 +150,36 @@ int bajaEmployee(eEmployee aAuxiliar[], int posicion)
 	}
 	return retorno;
 }
-int ordenarEmployees(eEmployee array[], int cantidadDeArray, int criterio)
+int ordenarEmployees(eEmployee aEmpleado[], int cantidadDeArray, int criterio)
 {
 		int flagDesordenado = -1;
 		int i;
 		eEmployee aux;
 		int retorno=-1;
 
-		if(array!=NULL && cantidadDeArray>0)
+		if(aEmpleado!=NULL && cantidadDeArray>0)
 		{
 			do {
 				flagDesordenado=0;
-				for (i = 0; i < cantidadDeArray-1; ++i)
+				for (i = 0; i < cantidadDeArray-1; i++)
 				{
 					if(criterio == 0)
 					{
-							if(strcmp(array[i].lastName,array[i+1].lastName)>0)
+							if(strcmp(aEmpleado[i].lastName,aEmpleado[i+1].lastName)>0)
 							{
 								flagDesordenado=1;
-								aux=array[i];
-								array[i]=array[i+1];
-								array[i+1]=aux;
+								aux=aEmpleado[i];
+								aEmpleado[i]=aEmpleado[i+1];
+								aEmpleado[i+1]=aux;
 							}
 							else
 							{
-									if(strcmp(array[i].lastName,array[i+1].lastName)==0 && array[i].sector > array[i+1].sector)
+									if(strcmp(aEmpleado[i].lastName,aEmpleado[i+1].lastName)==0 && aEmpleado[i].sector > aEmpleado[i+1].sector)
 									{
 										flagDesordenado=1;
-										aux=array[i];
-										array[i]=array[i+1];
-										array[i+1]=aux;
+										aux=aEmpleado[i];
+										aEmpleado[i]=aEmpleado[i+1];
+										aEmpleado[i+1]=aux;
 									}
 							}
 						}
@@ -187,21 +187,21 @@ int ordenarEmployees(eEmployee array[], int cantidadDeArray, int criterio)
 						{
 							if(criterio == 1)
 							{
-								if(strcmp(array[i+1].lastName,array[i].lastName)>0)
+								if(strcmp(aEmpleado[i+1].lastName,aEmpleado[i].lastName)>0)
 								{
 									flagDesordenado=1;
-									aux=array[i];
-									array[i]=array[i+1];
-									array[i+1]=aux;
+									aux=aEmpleado[i];
+									aEmpleado[i]=aEmpleado[i+1];
+									aEmpleado[i+1]=aux;
 								}
 								else
 								{
-									if(strcmp(array[i].lastName,array[i+1].lastName)==0 && array[i+1].sector > array[i].sector)
+									if(strcmp(aEmpleado[i].lastName,aEmpleado[i+1].lastName)==0 && aEmpleado[i+1].sector > aEmpleado[i].sector)
 									{
 										flagDesordenado=1;
-										aux=array[i];
-										array[i]=array[i+1];
-										array[i+1]=aux;
+										aux=aEmpleado[i];
+										aEmpleado[i]=aEmpleado[i+1];
+										aEmpleado[i+1]=aux;
 									}
 								}
 							}
