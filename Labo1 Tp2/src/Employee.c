@@ -243,7 +243,7 @@ int modifica1Employee(eEmployee aAuxiliar[], int posicion)
 							imprimir1Employee(aAuxiliar[posicion]);
 							break;
 						case 3:
-							utn_getNumeroConDecimales(&aAuxiliar[posicion].salary,"Ingrese salario","Error, ingrese salario entre 300-3000",300,3000,1);
+							utn_getNumeroFlotante(&aAuxiliar[posicion].salary,"Ingrese salario","Error, ingrese salario entre 300-3000",300,3000,1);
 							printf("Exito, los nuevos datos son: ");
 							imprimir1Employee(aAuxiliar[posicion]);
 							break;

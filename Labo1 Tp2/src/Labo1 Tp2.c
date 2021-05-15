@@ -10,7 +10,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 #include "Employee.h"
 #include "UTN.h"
 
@@ -31,7 +30,6 @@ int main(void) {
 		if(utn_getNumero(&respuestaMenuPrincipal,"Seleccione una opcion\n1.Ingresar 1 Empleado\n2.Modificar\n3.Dar de baja\n4.Informes\n5.Salir",
 				"Error ingrese: \n1.Ingresar un empleado\n2.Modificar\n3.Dar de baja\n4.Informes\n5.Salir", 1, 5, 2)==0)
 		{
-
 			switch(respuestaMenuPrincipal)
 			{
 				case 1: //ALTA
