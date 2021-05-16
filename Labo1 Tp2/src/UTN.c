@@ -159,7 +159,7 @@ int esLetraConEspacio(char *pResultado)
 	}
 	return retorno;
 }
-int esTelefonoValido(char* cadena)
+int esTelefono(char* cadena)
 {
     int retorno=1;
     int i;
@@ -405,7 +405,7 @@ int utn_getTelefono(char* pResultado, char* mensaje, char* mensajeError, int min
         do
         {
         	printf("%s",mensaje);
-            if(myGets(bufferStr, 50)==0 && esTelefonoValido(bufferStr)==1)
+            if(myGets(bufferStr, 50)==0 && esTelefono(bufferStr)==1)
             {
                     strcpy(pResultado,bufferStr);
                     retorno=0;
