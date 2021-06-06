@@ -308,24 +308,24 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
 	int option;
 	Employee* pAuxEmpleado1=employee_new();
 	Employee* pAuxEmpleado2=employee_new();
+	int(*pOrden)(Employee*,Employee*);
+
 	if(pArrayListEmployee!=NULL)
 	{
 		utn_getNumero(&option, "-----ORDENAMIENTO-----\n1. Nombre \n2. Horas Trabajadas \n3. Sueldo", "Error, opcion incorrecta", 1, 3, 2);
 		switch(option)
 		{
 			case 1:
-
-				ll_sort(pArrayListEmployee, employee_sortNombre(pAuxEmpleado1, pAuxEmpleado2), 1);
+				pOrden=employee_sortNombre;
 				break;
 			case 2:
-
-				ll_sort(pArrayListEmployee, employee_sortHoras(pAuxEmpleado1, pAuxEmpleado2), 1);
+				pOrden=employee_sortHoras;
 				break;
 			case 3:
-
-				ll_sort(pArrayListEmployee, employee_sortSueldo(pAuxEmpleado1, pAuxEmpleado2), 1);
+				pOrden=employee_sortSueldo;
 				break;
 		}//FIN SWITCH
+		ll_sort(pArrayListEmployee, pOrden, 1);
 	}
 //	if(array!=NULL && pFuncion!=NULL)
 //		{

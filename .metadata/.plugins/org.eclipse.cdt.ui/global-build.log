@@ -629,3 +629,27 @@ In file included from ..\Controller.c:3:
    56 | int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
       |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~
 gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+07:12:29 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:220:16: warning: unused variable 'auxInt' [-Wunused-variable]
+  220 |  int auxId,id, auxInt, i;
+      |                ^~~~~~
+..\Controller.c: In function 'controller_sortEmployee':
+..\Controller.c:328:31: warning: passing argument 2 of 'll_sort' from incompatible pointer type [-Wincompatible-pointer-types]
+  328 |   ll_sort(pArrayListEmployee, pOrden, 1);
+      |                               ^~~~~~
+      |                               |
+      |                               int (*)(Employee *, Employee *) {aka int (*)(struct <anonymous> *, struct <anonymous> *)}
+In file included from ..\Controller.c:3:
+..\LinkedList.h:56:37: note: expected 'int (*)(void *, void *)' but argument is of type 'int (*)(Employee *, Employee *)' {aka 'int (*)(struct <anonymous> *, struct <anonymous> *)'}
+   56 | int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+      |                               ~~~~~~^~~~~~~~~~~~~~~~~~~~
+..\Controller.c:310:12: warning: unused variable 'pAuxEmpleado2' [-Wunused-variable]
+  310 |  Employee* pAuxEmpleado2=employee_new();
+      |            ^~~~~~~~~~~~~
+..\Controller.c:309:12: warning: unused variable 'pAuxEmpleado1' [-Wunused-variable]
+  309 |  Employee* pAuxEmpleado1=employee_new();
+      |            ^~~~~~~~~~~~~
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
