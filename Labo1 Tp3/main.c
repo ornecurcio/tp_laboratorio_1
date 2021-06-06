@@ -24,9 +24,7 @@ int main()
 {
 	setbuf(stdout, NULL);
     int option;
-//    FILE* f2;
-//    int auxCantLink;
-    int aux;
+    int flag=0;
     Employee* pAuxEmpleado;
 
     LinkedList* listaEmpleados = ll_newLinkedList();
@@ -44,9 +42,10 @@ int main()
 			switch(option)
 			{
 				case 1:
-					if(ll_len(listaEmpleados)==0)
+					if(flag==0)
 					{
 						controller_loadFromText("data.csv",listaEmpleados);
+						flag=1;
 					}
 					else
 					{
@@ -54,7 +53,14 @@ int main()
 					}
 					break;
 				case 2:
-					controller_loadFromBinary("data.bin",listaEmpleados);
+					if(flag==0)
+					{
+						controller_loadFromBinary("data.bin",listaEmpleados);
+					}
+					else
+					{
+						printf("El archivo ya fue cargado");
+					}
 //					auxCantLink=ll_len(listaEmpleados);
 //					f2=fopen("data.bin","wb");
 //					for(int i=0; i<auxCantLink; i++)

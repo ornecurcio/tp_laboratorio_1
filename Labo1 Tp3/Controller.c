@@ -166,19 +166,24 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 	int retorno = -1;
 	Employee* pAuxEmpleado=NULL;
 	int cantidadLinkedList;
-	if(ll_isEmpty(pArrayListEmployee)==0)
-	{
-		cantidadLinkedList=ll_len(pArrayListEmployee);
-	}
 	if(pArrayListEmployee != NULL)
 	{
-		for(int i=0; i<cantidadLinkedList ; i++)
+		if(ll_isEmpty(pArrayListEmployee)==0)
 		{
-			pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
-			printf("Id: %d - Nombre: %s - Horas Trabajadas: %d - Sueldo: %d\n",(*(pAuxEmpleado)).id, (*(pAuxEmpleado)).nombre,
-					(*(pAuxEmpleado)).horasTrabajadas, (*(pAuxEmpleado)).sueldo);
+			cantidadLinkedList=ll_len(pArrayListEmployee);
+			for(int i=0; i<cantidadLinkedList ; i++)
+			{
+				pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
+				printf("Id: %d - Nombre: %s - Horas Trabajadas: %d - Sueldo: %d\n",(*(pAuxEmpleado)).id, (*(pAuxEmpleado)).nombre,
+						(*(pAuxEmpleado)).horasTrabajadas, (*(pAuxEmpleado)).sueldo);
+			}
+			retorno = 0;
 		}
-		retorno = 0;
+		else
+		{
+			printf("No hay lista para imprimir\n");
+		}
+
 	}
 
 	return retorno;
