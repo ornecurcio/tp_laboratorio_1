@@ -304,7 +304,62 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+	int retorno=-1;
+	int option;
+	Employee* pAuxEmpleado1=employee_new();
+	Employee* pAuxEmpleado2=employee_new();
+	if(pArrayListEmployee!=NULL)
+	{
+		utn_getNumero(&option, "-----ORDENAMIENTO-----\n1. Nombre \n2. Horas Trabajadas \n3. Sueldo", "Error, opcion incorrecta", 1, 3, 2);
+		switch(option)
+		{
+			case 1:
+
+				ll_sort(pArrayListEmployee, employee_sortNombre(pAuxEmpleado1, pAuxEmpleado2), 1);
+				break;
+			case 2:
+
+				ll_sort(pArrayListEmployee, employee_sortHoras(pAuxEmpleado1, pAuxEmpleado2), 1);
+				break;
+			case 3:
+
+				ll_sort(pArrayListEmployee, employee_sortSueldo(pAuxEmpleado1, pAuxEmpleado2), 1);
+				break;
+		}//FIN SWITCH
+	}
+//	if(array!=NULL && pFuncion!=NULL)
+//		{
+//			for(int i=0; i<cantidadDeArray-1; i++)
+//			{
+//				for(int j=i+1; j<cantidadDeArray; j++)
+//				{
+//					switch(criterio)
+//					{
+//					 case 0:
+//						if(pFuncion((array+i), (array+j))>0)
+//						{
+//							 aux = *(array+i);
+//							*(array+i) = *(array+j);
+//							*(array+j) = aux;
+//
+//							retorno=0;
+//						}
+//						break;
+//					 case 1:
+//						 if(pFuncion((array+i), (array+j))<0)
+//						{
+//							 aux = *(array+i);
+//							*(array+i) = *(array+j);
+//							*(array+j) = aux;
+//
+//							retorno=0;
+//						}
+//						break;
+//					}
+//				}
+//			}
+//		}
+    return retorno;
 }
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo texto).
