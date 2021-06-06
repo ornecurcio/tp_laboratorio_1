@@ -4,6 +4,10 @@
 #include "Employee.h"
 #include "UTN.h"
 
+void employee_delete(Employee* this)
+{
+	free(this);
+}
 Employee* employee_new()
 {
 	return (Employee*)malloc(sizeof(Employee));
@@ -23,10 +27,6 @@ Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajad
 		}
 	}
 	return pAuxEmpleado;
-}
-void employee_delete(Employee* this)
-{
-	free(this);
 }
 int employee_setId(Employee* this,int id)
 {

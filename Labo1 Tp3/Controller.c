@@ -3,6 +3,7 @@
 #include "LinkedList.h"
 #include "Employee.h"
 #include "parser.h"
+#include "UTN.h"
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
  *
@@ -67,7 +68,66 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+	int retorno=-1;
+	Employee* pAuxEmpleado=NULL;
+	int cantidadLinkedList;
+	int id;
+	char auxNombre[128];
+	int auxHoras;
+	int auxSueldo;
+	int numMax=0;
+	if(pArrayListEmployee!=NULL)
+	{
+		if(ll_isEmpty(pArrayListEmployee)==0)
+		{
+			cantidadLinkedList=ll_len(pArrayListEmployee);
+			for(int i=0; i<cantidadLinkedList ; i++)
+			{
+				pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
+				employee_getId(pAuxEmpleado, &id);
+				if(id>numMax)
+				{
+					numMax=id;
+				}
+			}
+		}
+		else
+		{
+			printf("Desea crear una nueva lista inicializando el ID en 1\n");
+			if(utn_getCaracterSN()==0)
+			{
+				id=0;
+			}
+			else
+			{
+				utn_getNumero(&id, "En que numero quiere inicializar el ID?", "Error, ingrese valor numerico", 1, 100000000, 2);
+			}
+		}
+		pAuxEmpleado=employee_new();
+		if(pAuxEmpleado!=NULL)
+		{
+			if(utn_getNombre(auxNombre, "Ingrese nombre del empleado", "Error, muy largo", 2, 128)==0 &&
+			   utn_getNumero(&auxHoras, "Ingrese horas trabajadas", "Error, maximo 100000", 0, 100000, 2)==0 &&
+			   utn_getNumero(&auxSueldo, "Ingrese sueldo", "Error, maximo 999999", 0, 999999, 2)==0)
+			{
+					if(employee_setId(pAuxEmpleado, (id+1))==0 &&
+					   employee_setNombre(pAuxEmpleado, auxNombre)==0 &&
+					   employee_setHorasTrabajadas(pAuxEmpleado, auxHoras)==0 &&
+					   employee_setSueldo(pAuxEmpleado, auxSueldo)==0)
+					{
+						ll_add(pArrayListEmployee, pAuxEmpleado);
+						printf("Carga exitosa\n");
+						retorno=0;
+					}
+					else
+					{
+						printf("Error al cargar empleado\n");
+					}
+			}
+		}
+
+	}
+    return retorno;
 }
 
 /** \brief Modificar datos de empleado

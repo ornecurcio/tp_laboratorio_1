@@ -55,10 +55,6 @@ int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 {
 	int retorno = -1;
 	int retornoLeido;
-//    		int auxId;
-//    		char auxNombre[128];
-//    		int auxHoras;
-//    		int auxSueldo;
 	Employee* pAuxEmpleado=NULL;
 
 	if(pFile!=NULL && pArrayListEmployee!=NULL)
@@ -66,23 +62,20 @@ int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 		do
 		{
 			pAuxEmpleado=employee_new();
-			retornoLeido = fread(pAuxEmpleado,sizeof(Employee),1,pFile);
-			if(retornoLeido!=1)
+			if(pAuxEmpleado!=NULL)
 			{
-				employee_delete(pAuxEmpleado);
-				retorno=-1;
-				break;
-			}
-			else
-			{
-				if(pAuxEmpleado!=NULL)
+				retornoLeido = fread(pAuxEmpleado,sizeof(Employee),1,pFile);
+				if(retornoLeido!=1)
+				{
+					employee_delete(pAuxEmpleado);
+					break;
+				}
+				else
 				{
 					ll_add(pArrayListEmployee,pAuxEmpleado);
 					retorno=0;
 				}
 			}
-			printf("Id: %d - Nombre: %s - Horas Trabajadas: %d - Sueldo: %d\n",(*(pAuxEmpleado)).id, (*(pAuxEmpleado)).nombre,
-								(*(pAuxEmpleado)).horasTrabajadas, (*(pAuxEmpleado)).sueldo);
 		}while(!feof(pFile));
 	}
 	return retorno;

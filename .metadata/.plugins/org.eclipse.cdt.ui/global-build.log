@@ -127,3 +127,174 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
 gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
 Info: Nothing to build for Labo1 Tp3
+01:11:43 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+01:12:46 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:29:9: warning: unused variable 'aux' [-Wunused-variable]
+   29 |     int aux;
+      |         ^~~
+..\main.c:28:9: warning: unused variable 'auxCantLink' [-Wunused-variable]
+   28 |     int auxCantLink;
+      |         ^~~~~~~~~~~
+..\main.c:27:11: warning: unused variable 'f2' [-Wunused-variable]
+   27 |     FILE* f2;
+      |           ^~
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+01:21:17 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:29:9: warning: unused variable 'aux' [-Wunused-variable]
+   29 |     int aux;
+      |         ^~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+01:22:22 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:30:15: warning: unused variable 'pAuxEmpleado' [-Wunused-variable]
+   30 |     Employee* pAuxEmpleado;
+      |               ^~~~~~~~~~~~
+..\main.c:29:9: warning: unused variable 'aux' [-Wunused-variable]
+   29 |     int aux;
+      |         ^~~
+..\main.c:28:9: warning: unused variable 'auxCantLink' [-Wunused-variable]
+   28 |     int auxCantLink;
+      |         ^~~~~~~~~~~
+..\main.c:27:11: warning: unused variable 'f2' [-Wunused-variable]
+   27 |     FILE* f2;
+      |           ^~
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+01:27:06 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Labo1 Tp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:27:13 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Labo1 Tp3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:27:31 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+01:28:35 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+01:31:01 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+01:32:40 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+01:33:19 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+01:34:43 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+01:39:04 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+01:51:35 **** Rebuild of configuration Debug for project Labo1 Tp2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo1 Tp2.o" "..\\src\\Labo1 Tp2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\UTN.o" "..\\src\\UTN.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Employee.o" "..\\src\\Employee.c" 
+gcc -o "Labo1 Tp2.exe" "src\\Employee.o" "src\\Labo1 Tp2.o" "src\\UTN.o" 
+01:51:37 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+01:51:38 **** Rebuild of configuration Debug for project Labo1Tp1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesUTNyMenu.o" "..\\src\\funcionesUTNyMenu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\calculos.o" "..\\src\\calculos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo1Tp1.o" "..\\src\\Labo1Tp1.c" 
+gcc -o Labo1Tp1.exe "src\\Labo1Tp1.o" "src\\calculos.o" "src\\funcionesUTNyMenu.o" 
+02:46:48 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:30:15: warning: unused variable 'pAuxEmpleado' [-Wunused-variable]
+   30 |     Employee* pAuxEmpleado;
+      |               ^~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+03:48:17 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_addEmployee':
+..\Controller.c:86:5: warning: implicit declaration of function 'controller_getMaxId' [-Wimplicit-function-declaration]
+   86 |     controller_getMaxId(pArrayListEmployee, &id);
+      |     ^~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:30:15: warning: unused variable 'pAuxEmpleado' [-Wunused-variable]
+   30 |     Employee* pAuxEmpleado;
+      |               ^~~~~~~~~~~~
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+04:05:53 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_getMaxId':
+..\Controller.c:222:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  222 |  int retorno=-1;
+      |      ^~~~~~~
+..\Controller.c: At top level:
+..\Controller.c:226:2: error: expected identifier or '(' before 'return'
+  226 |  return retorno;
+      |  ^~~~~~
+..\Controller.c:227:1: error: expected identifier or '(' before '}' token
+  227 | }
+      | ^
+..\Controller.c: In function 'controller_getMaxId':
+..\Controller.c:225:2: warning: control reaches end of non-void function [-Wreturn-type]
+  225 |  }
+      |  ^
+04:06:21 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:30:15: warning: unused variable 'pAuxEmpleado' [-Wunused-variable]
+   30 |     Employee* pAuxEmpleado;
+      |               ^~~~~~~~~~~~
+..\main.c:29:9: warning: unused variable 'aux' [-Wunused-variable]
+   29 |     int aux;
+      |         ^~~
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+04:10:32 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3

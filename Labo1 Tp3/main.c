@@ -24,9 +24,10 @@ int main()
 {
 	setbuf(stdout, NULL);
     int option;
-    FILE* f2;
-    int auxCantLink;
+//    FILE* f2;
+//    int auxCantLink;
     int aux;
+    Employee* pAuxEmpleado;
 
     LinkedList* listaEmpleados = ll_newLinkedList();
     do{
@@ -53,14 +54,18 @@ int main()
 					}
 					break;
 				case 2:
-//					controller_loadFromBinary("data.bin",listaEmpleados);
-					auxCantLink=ll_len(listaEmpleados);
-					f2=fopen("data.bin","wb");
-					fwrite(listaEmpleados, sizeof(Employee),auxCantLink,f2);
-					fclose(f2);
+					controller_loadFromBinary("data.bin",listaEmpleados);
+//					auxCantLink=ll_len(listaEmpleados);
+//					f2=fopen("data.bin","wb");
+//					for(int i=0; i<auxCantLink; i++)
+//					{
+//						pAuxEmpleado = (Employee*)ll_get(listaEmpleados, i);
+//					 fwrite(pAuxEmpleado, sizeof(Employee),1,f2);
+//					}
+//					fclose(f2);
 					break;
 				case 3:
-					//controller_addEmployee(listaEmpleados);
+					controller_addEmployee(listaEmpleados);
 					break;
 				case 4:
 					//controller_editEmployee(listaEmpleados);
