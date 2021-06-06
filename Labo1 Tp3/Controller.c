@@ -306,9 +306,7 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
 	int retorno=-1;
 	int option;
-	Employee* pAuxEmpleado1=employee_new();
-	Employee* pAuxEmpleado2=employee_new();
-	int(*pOrden)(Employee*,Employee*);
+	int(*pOrden)(void*,void*);
 
 	if(pArrayListEmployee!=NULL)
 	{
@@ -316,10 +314,10 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
 		switch(option)
 		{
 			case 1:
-				pOrden=employee_sortNombre;
+				//pOrden=employee_sortNombre;
 				break;
 			case 2:
-				pOrden=employee_sortHoras;
+				//pOrden=employee_sortHoras;
 				break;
 			case 3:
 				pOrden=employee_sortSueldo;

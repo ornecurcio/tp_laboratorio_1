@@ -113,19 +113,19 @@ void employee_print(Employee* this)
 	printf("Id: %d - Nombre: %s - Horas Trabajadas: %d - Sueldo: %d\n",(*(this)).id, (*(this)).nombre,
 																	   (*(this)).horasTrabajadas, (*(this)).sueldo);
 }
-int employee_sortSueldo(Employee* thisOne, Employee* thisTwo)
+int employee_sortSueldo(void* thisOne, void* thisTwo)
 {
-	int retorno=0;
+	int retorno=-1;
+	Employee* pAuxEmpleado1;
+	Employee* pAuxEmpleado2;
 	if(thisOne!=NULL && thisTwo!=NULL)
 	{
-		if( (*(thisOne)).sueldo > (*(thisTwo)).sueldo )
+		pAuxEmpleado1=(Employee*)thisOne;
+		pAuxEmpleado2=(Employee*)thisTwo;
+		if( (*(pAuxEmpleado1)).sueldo > (*(pAuxEmpleado2)).sueldo )
 		{
 			retorno=1;
 		}
-//		if( (*(thisOne)).sueldo < (*(thisTwo)).sueldo )
-//		{
-//			retorno=-1;
-//		}
 	}
 	return retorno;
 }

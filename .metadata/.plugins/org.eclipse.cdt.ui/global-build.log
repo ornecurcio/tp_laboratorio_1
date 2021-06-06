@@ -653,3 +653,19 @@ In file included from ..\Controller.c:3:
   309 |  Employee* pAuxEmpleado1=employee_new();
       |            ^~~~~~~~~~~~~
 gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+12:23:37 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:28:15: warning: unused variable 'pAuxEmpleado' [-Wunused-variable]
+   28 |     Employee* pAuxEmpleado;
+      |               ^~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:220:16: warning: unused variable 'auxInt' [-Wunused-variable]
+  220 |  int auxId,id, auxInt, i;
+      |                ^~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3

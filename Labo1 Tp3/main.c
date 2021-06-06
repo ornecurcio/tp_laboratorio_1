@@ -25,7 +25,6 @@ int main()
 	setbuf(stdout, NULL);
     int option;
     int flag=0;
-    Employee* pAuxEmpleado;
 
     LinkedList* listaEmpleados = ll_newLinkedList();
     do{
@@ -38,7 +37,7 @@ int main()
     			"2. Cargar los datos de los empleados desde el archivo data.bin (modo binario)\n"
     			"3. Alta de empleado\n4. Modificar datos de empleado\n5. Baja de empleado\n6. Listar empleados\n7. Ordenar empleados\n"
     			"8. Guardar los datos de los empleados en el archivo data.csv (modo texto)\n"
-    			"9. Guardar los datos de los empleados en el archivo data.csv (modo binario)\n10. Salir", 1, 10, 2)==0){
+    			"9. Guardar los datos de los empleados en el archivo data.csv (modo binario)\n10. Salir\n", 1, 10, 2)==0){
 			switch(option)
 			{
 				case 1:
