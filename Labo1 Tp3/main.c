@@ -59,7 +59,7 @@ int main()
 					}
 					else
 					{
-						printf("El archivo ya fue cargado");
+						printf("El archivo ya fue cargado\n");
 					}
 //					auxCantLink=ll_len(listaEmpleados);
 //					f2=fopen("data.bin","wb");
@@ -77,7 +77,7 @@ int main()
 					controller_editEmployee(listaEmpleados);
 					break;
 				case 5:
-					//controller_removeEmployee(listaEmpleados);
+					controller_removeEmployee(listaEmpleados);
 					break;
 				case 6:
 					controller_ListEmployee(listaEmpleados);

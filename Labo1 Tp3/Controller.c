@@ -197,6 +197,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
 							}
 							break;
 					}//FIN SWITCH
+					retorno=0;
 				}
 			}
 		 }//FIN FOR
@@ -213,7 +214,48 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_removeEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+	int retorno=-1;
+	Employee* pAuxEmpleado=NULL;
+	int cantidadLinkedList;
+	int auxId,id, auxInt, i;
+	int numMax=0;
+	//char auxNombre[128];
+
+	if(pArrayListEmployee!=NULL && ll_isEmpty(pArrayListEmployee)==0)
+	{
+		cantidadLinkedList=ll_len(pArrayListEmployee);
+		for(int i=0; i<cantidadLinkedList ; i++)
+		{
+			pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
+			employee_getId(pAuxEmpleado, &auxId);
+			if(auxId>numMax)
+			{
+				numMax=auxId;
+			}
+		}
+		utn_getNumero(&id, "Ingrese Id de persona a modificar", "Error, ingrese valor numerico", 0, auxId, 2);
+		for(i=0; i<cantidadLinkedList ; i++)
+		{
+			pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
+			employee_getId(pAuxEmpleado, &auxId);
+			if(auxId==id)
+			{
+				printf("Desea borrar este empleado?\n");
+				employee_print(pAuxEmpleado);
+				if(utn_getCaracterSN()==0)
+				{
+					if(ll_remove(pArrayListEmployee, i)==0)
+					{
+						printf("Operacion exitosa\n");
+						retorno=0;
+						break;
+					}
+				}
+			}
+		}
+	}
+
+    return retorno;
 }
 
 /** \brief Listar empleados
@@ -236,8 +278,9 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 			for(int i=0; i<cantidadLinkedList ; i++)
 			{
 				pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
-				printf("Id: %d - Nombre: %s - Horas Trabajadas: %d - Sueldo: %d\n",(*(pAuxEmpleado)).id, (*(pAuxEmpleado)).nombre,
-						                                                           (*(pAuxEmpleado)).horasTrabajadas, (*(pAuxEmpleado)).sueldo);
+				employee_print(pAuxEmpleado);
+//				printf("Id: %d - Nombre: %s - Horas Trabajadas: %d - Sueldo: %d\n",(*(pAuxEmpleado)).id, (*(pAuxEmpleado)).nombre,
+//						                                                           (*(pAuxEmpleado)).horasTrabajadas, (*(pAuxEmpleado)).sueldo);
 			}
 			retorno = 0;
 		}

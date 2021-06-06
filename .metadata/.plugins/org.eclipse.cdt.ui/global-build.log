@@ -343,3 +343,126 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
 gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
 Info: Nothing to build for Labo1 Tp3
+05:56:25 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:247:19: warning: passing argument 1 of 'll_remove' from incompatible pointer type [-Wincompatible-pointer-types]
+  247 |      if(ll_remove(pAuxEmpleado, i)==0)
+      |                   ^~~~~~~~~~~~
+      |                   |
+      |                   Employee * {aka struct <anonymous> *}
+In file included from ..\Controller.c:3:
+..\LinkedList.h:45:27: note: expected 'LinkedList *' {aka 'struct LinkedList *'} but argument is of type 'Employee *' {aka 'struct <anonymous> *'}
+   45 | int ll_remove(LinkedList* this,int index);
+      |               ~~~~~~~~~~~~^~~~
+..\Controller.c:327:1: error: expected declaration or statement at end of input
+  327 | }
+      | ^
+..\Controller.c:327:1: error: expected declaration or statement at end of input
+..\Controller.c:327:1: error: expected declaration or statement at end of input
+..\Controller.c:222:7: warning: unused variable 'auxNombre' [-Wunused-variable]
+  222 |  char auxNombre[128];
+      |       ^~~~~~~~~
+..\Controller.c:220:38: warning: unused variable 'auxInt' [-Wunused-variable]
+  220 |  int auxId, auxHoras, auxSueldo, id, auxInt, i;
+      |                                      ^~~~~~
+..\Controller.c:220:23: warning: unused variable 'auxSueldo' [-Wunused-variable]
+  220 |  int auxId, auxHoras, auxSueldo, id, auxInt, i;
+      |                       ^~~~~~~~~
+..\Controller.c:220:13: warning: unused variable 'auxHoras' [-Wunused-variable]
+  220 |  int auxId, auxHoras, auxSueldo, id, auxInt, i;
+      |             ^~~~~~~~
+..\Controller.c:327:1: warning: control reaches end of non-void function [-Wreturn-type]
+  327 | }
+      | ^
+At top level:
+..\Controller.c:324:5: warning: 'controller_saveAsBinary' defined but not used [-Wunused-function]
+  324 | int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:312:5: warning: 'controller_saveAsText' defined but not used [-Wunused-function]
+  312 | int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
+      |     ^~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:300:5: warning: 'controller_sortEmployee' defined but not used [-Wunused-function]
+  300 | int controller_sortEmployee(LinkedList* pArrayListEmployee)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:263:5: warning: 'controller_ListEmployee' defined but not used [-Wunused-function]
+  263 | int controller_ListEmployee(LinkedList* pArrayListEmployee)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+05:59:03 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:28:15: warning: unused variable 'pAuxEmpleado' [-Wunused-variable]
+   28 |     Employee* pAuxEmpleado;
+      |               ^~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:327:1: error: expected declaration or statement at end of input
+  327 | }
+      | ^
+..\Controller.c:327:1: error: expected declaration or statement at end of input
+..\Controller.c:327:1: error: expected declaration or statement at end of input
+..\Controller.c:220:16: warning: unused variable 'auxInt' [-Wunused-variable]
+  220 |  int auxId,id, auxInt, i;
+      |                ^~~~~~
+..\Controller.c:327:1: warning: control reaches end of non-void function [-Wreturn-type]
+  327 | }
+      | ^
+At top level:
+..\Controller.c:324:5: warning: 'controller_saveAsBinary' defined but not used [-Wunused-function]
+  324 | int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:312:5: warning: 'controller_saveAsText' defined but not used [-Wunused-function]
+  312 | int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
+      |     ^~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:300:5: warning: 'controller_sortEmployee' defined but not used [-Wunused-function]
+  300 | int controller_sortEmployee(LinkedList* pArrayListEmployee)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:263:5: warning: 'controller_ListEmployee' defined but not used [-Wunused-function]
+  263 | int controller_ListEmployee(LinkedList* pArrayListEmployee)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+06:00:40 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:331:1: error: expected declaration or statement at end of input
+  331 | }
+      | ^
+..\Controller.c:220:16: warning: unused variable 'auxInt' [-Wunused-variable]
+  220 |  int auxId,id, auxInt, i;
+      |                ^~~~~~
+..\Controller.c:331:1: warning: control reaches end of non-void function [-Wreturn-type]
+  331 | }
+      | ^
+At top level:
+..\Controller.c:328:5: warning: 'controller_saveAsBinary' defined but not used [-Wunused-function]
+  328 | int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:316:5: warning: 'controller_saveAsText' defined but not used [-Wunused-function]
+  316 | int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
+      |     ^~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:304:5: warning: 'controller_sortEmployee' defined but not used [-Wunused-function]
+  304 | int controller_sortEmployee(LinkedList* pArrayListEmployee)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+..\Controller.c:267:5: warning: 'controller_ListEmployee' defined but not used [-Wunused-function]
+  267 | int controller_ListEmployee(LinkedList* pArrayListEmployee)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+06:01:49 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_removeEmployee':
+..\Controller.c:220:16: warning: unused variable 'auxInt' [-Wunused-variable]
+  220 |  int auxId,id, auxInt, i;
+      |                ^~~~~~
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+06:02:34 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:28:15: warning: unused variable 'pAuxEmpleado' [-Wunused-variable]
+   28 |     Employee* pAuxEmpleado;
+      |               ^~~~~~~~~~~~
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
