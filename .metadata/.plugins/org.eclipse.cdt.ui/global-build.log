@@ -303,3 +303,43 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
 gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
 Info: Nothing to build for Labo1 Tp3
+05:32:33 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+..\Controller.c: In function 'controller_editEmployee':
+..\Controller.c:170:6: warning: implicit declaration of function 'prinf'; did you mean 'printf'? [-Wimplicit-function-declaration]
+  170 |      prinf("Desea modificar este empleado?");
+      |      ^~~~~
+      |      printf
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+..\Employee.c: In function 'employee_print':
+..\Employee.c:113:72: error: 'pAuxEmpleado' undeclared (first use in this function)
+  113 |  printf("Id: %d - Nombre: %s - Horas Trabajadas: %d - Sueldo: %d\n",(*(pAuxEmpleado)).id, (*(pAuxEmpleado)).nombre,
+      |                                                                        ^~~~~~~~~~~~
+..\Employee.c:113:72: note: each undeclared identifier is reported only once for each function it appears in
+05:33:40 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:28:15: warning: unused variable 'pAuxEmpleado' [-Wunused-variable]
+   28 |     Employee* pAuxEmpleado;
+      |               ^~~~~~~~~~~~
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+05:34:13 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:28:15: warning: unused variable 'pAuxEmpleado' [-Wunused-variable]
+   28 |     Employee* pAuxEmpleado;
+      |               ^~~~~~~~~~~~
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3
+05:41:53 **** Incremental Build of configuration Debug for project Labo1 Tp3 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o UTN.o main.o parser.o -lLinkedList 
+Info: Nothing to build for Labo1 Tp3

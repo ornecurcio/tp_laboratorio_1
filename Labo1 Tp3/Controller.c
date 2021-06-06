@@ -139,7 +139,69 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_editEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+	int retorno=-1;
+	Employee* pAuxEmpleado=NULL;
+	int cantidadLinkedList;
+	int auxId, auxHoras, auxSueldo, id, auxInt;
+	int numMax=0;
+	char auxNombre[128];
+
+	if(pArrayListEmployee!=NULL && ll_isEmpty(pArrayListEmployee)==0)
+	{
+		cantidadLinkedList=ll_len(pArrayListEmployee);
+		for(int i=0; i<cantidadLinkedList ; i++)
+		{
+			pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
+			employee_getId(pAuxEmpleado, &auxId);
+			if(auxId>numMax)
+			{
+				numMax=auxId;
+			}
+		}
+		utn_getNumero(&id, "Ingrese Id de persona a modificar", "Error, ingrese valor numerico", 0, auxId, 2);
+		for(int i=0; i<cantidadLinkedList ; i++)
+		{
+			pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
+			employee_getId(pAuxEmpleado, &auxId);
+			if(auxId==id)
+			{
+				printf("Desea modificar este empleado?\n");
+				employee_print(pAuxEmpleado);
+				if(utn_getCaracterSN()==0)
+				{
+					utn_getNumero(&auxInt, "------Modificar-------\n1. Nombre \n2. Horas trabajadas \n3. Sueldo", "Error, opcion incorrecta", 1, 3, 2);
+					switch(auxInt)
+					{
+						case 1:
+							if((utn_getNombre(auxNombre, "Ingrese nombre del empleado", "Error, muy largo", 2, 128)==0) &&
+							  (employee_setNombre(pAuxEmpleado, auxNombre)==0))
+							{
+								printf("Datos modificados correctamente\n");
+								employee_print(pAuxEmpleado);
+							}
+							break;
+						case 2:
+							if((utn_getNumero(&auxHoras, "Ingrese horas trabajadas", "Error, maximo 100000", 0, 100000, 2)==0) &&
+							   (employee_setHorasTrabajadas(pAuxEmpleado, auxHoras)==0))
+							{
+								printf("Datos modificados correctamente\n");
+								employee_print(pAuxEmpleado);
+							}
+							break;
+						case 3:
+							if((utn_getNumero(&auxSueldo, "Ingrese sueldo", "Error, maximo 999999", 0, 999999, 2)==0) &&
+							   (employee_setSueldo(pAuxEmpleado, auxSueldo)==0))
+							{
+								printf("Datos modificados correctamente\n");
+								employee_print(pAuxEmpleado);
+							}
+							break;
+					}//FIN SWITCH
+				}
+			}
+		 }//FIN FOR
+		}
+	return retorno;
 }
 
 /** \brief Baja de empleado
@@ -175,7 +237,7 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 			{
 				pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
 				printf("Id: %d - Nombre: %s - Horas Trabajadas: %d - Sueldo: %d\n",(*(pAuxEmpleado)).id, (*(pAuxEmpleado)).nombre,
-						(*(pAuxEmpleado)).horasTrabajadas, (*(pAuxEmpleado)).sueldo);
+						                                                           (*(pAuxEmpleado)).horasTrabajadas, (*(pAuxEmpleado)).sueldo);
 			}
 			retorno = 0;
 		}

@@ -74,7 +74,7 @@ int main()
 					controller_addEmployee(listaEmpleados);
 					break;
 				case 4:
-					//controller_editEmployee(listaEmpleados);
+					controller_editEmployee(listaEmpleados);
 					break;
 				case 5:
 					//controller_removeEmployee(listaEmpleados);
