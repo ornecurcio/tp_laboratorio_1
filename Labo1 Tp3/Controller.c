@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Employee.h"
-
+#include "parser.h"
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
  *
@@ -13,7 +13,22 @@
  */
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+	int retorno=-1;
+	if(path!=NULL && pArrayListEmployee!=NULL)
+	{
+		FILE *pFile=fopen(path,"r");
+		if(parser_EmployeeFromText(pFile,pArrayListEmployee)!=0)
+		{
+			printf("No se pudo leer el archivo\n");
+		}
+		else
+		{
+			printf("Archivo bien leido. Cerrado correctamente\n");
+			retorno=0;
+			fclose(pFile);
+		}
+	}
+	return retorno;
 }
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo binario).
@@ -25,7 +40,22 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+	int retorno=-1;
+	if(path!=NULL && pArrayListEmployee!=NULL)
+	{
+		FILE *pFile=fopen(path,"rb");
+		if(parser_EmployeeFromBinary(pFile,pArrayListEmployee)!=0)
+		{
+			printf("No se pudo leer el archivo\n");
+		}
+		else
+		{
+			printf("Archivo bien leido. Cerrado correctamente\n");
+			retorno=0;
+			fclose(pFile);
+		}
+	}
+	return retorno;
 }
 
 /** \brief Alta de empleados
@@ -73,7 +103,26 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_ListEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+	int retorno = -1;
+	Employee* pAuxEmpleado=NULL;
+	int cantidadLinkedList;
+	if(ll_isEmpty(pArrayListEmployee)==0)
+	{
+		cantidadLinkedList=ll_len(pArrayListEmployee);
+	}
+	if(pArrayListEmployee != NULL)
+	{
+		for(int i=0; i<cantidadLinkedList ; i++)
+		{
+			pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
+			printf("Id: %d - Nombre: %s - Horas Trabajadas: %d - Sueldo: %d\n",(*(pAuxEmpleado)).id, (*(pAuxEmpleado)).nombre,
+					(*(pAuxEmpleado)).horasTrabajadas, (*(pAuxEmpleado)).sueldo);
+		}
+		retorno = 0;
+	}
+
+	return retorno;
+
 }
 
 /** \brief Ordenar empleados
