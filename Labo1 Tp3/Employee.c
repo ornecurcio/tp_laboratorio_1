@@ -126,31 +126,50 @@ int employee_sortSueldo(void* thisOne, void* thisTwo)
 		{
 			retorno=1;
 		}
+		if( (*(pAuxEmpleado1)).sueldo < (*(pAuxEmpleado2)).sueldo )
+		{
+			retorno=-1;
+		}
 	}
 	return retorno;
 }
-int employee_sortHoras(Employee* thisOne, Employee* thisTwo)
+int employee_sortHoras(void* thisOne, void* thisTwo)
 {
 	int retorno=0;
+	Employee* pAuxEmpleado1;
+	Employee* pAuxEmpleado2;
 	if(thisOne!=NULL && thisTwo!=NULL)
 	{
-		if( (*(thisOne)).horasTrabajadas > (*(thisTwo)).horasTrabajadas )
+		pAuxEmpleado1=(Employee*)thisOne;
+		pAuxEmpleado2=(Employee*)thisTwo;
+		if( (*(pAuxEmpleado1)).horasTrabajadas > (*(pAuxEmpleado2)).horasTrabajadas )
 		{
 			retorno=1;
 		}
-//		if( (*(thisOne)).horasTrabajadas < (*(thisTwo)).horasTrabajadas )
-//		{
-//			retorno=-1;
-//		}
+		if( (*(pAuxEmpleado1)).horasTrabajadas < (*(pAuxEmpleado2)).horasTrabajadas )
+		{
+			retorno=-1;
+		}
 	}
 	return retorno;
 }
-int employee_sortNombre(Employee* thisOne, Employee* thisTwo)
+int employee_sortNombre(void* thisOne, void* thisTwo)
 {
 	int retorno=0;
+	Employee* pAuxEmpleado1;
+	Employee* pAuxEmpleado2;
 	if(thisOne!=NULL && thisTwo!=NULL)
 	{
-		retorno = strcmp((*(thisOne)).nombre,(*(thisTwo)).nombre);
+		pAuxEmpleado1=(Employee*)thisOne;
+		pAuxEmpleado2=(Employee*)thisTwo;
+		if(strcmp((*(pAuxEmpleado1)).nombre,(*(pAuxEmpleado2)).nombre)>0)
+		{
+			retorno=1;
+		}
+		if(strcmp((*(pAuxEmpleado1)).nombre,(*(pAuxEmpleado2)).nombre)<0)
+		{
+			retorno=-1;
+		}
 	}
 	return retorno;
 }

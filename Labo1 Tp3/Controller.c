@@ -217,9 +217,8 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 	int retorno=-1;
 	Employee* pAuxEmpleado=NULL;
 	int cantidadLinkedList;
-	int auxId,id, auxInt, i;
+	int auxId, id, i;
 	int numMax=0;
-	//char auxNombre[128];
 
 	if(pArrayListEmployee!=NULL && ll_isEmpty(pArrayListEmployee)==0)
 	{
@@ -254,7 +253,6 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 			}
 		}
 	}
-
     return retorno;
 }
 
@@ -288,11 +286,8 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 		{
 			printf("No hay lista para imprimir\n");
 		}
-
 	}
-
 	return retorno;
-
 }
 
 /** \brief Ordenar empleados
@@ -310,53 +305,22 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
 
 	if(pArrayListEmployee!=NULL)
 	{
-		utn_getNumero(&option, "-----ORDENAMIENTO-----\n1. Nombre \n2. Horas Trabajadas \n3. Sueldo", "Error, opcion incorrecta", 1, 3, 2);
+		utn_getNumero(&option, "-----ORDENAMIENTO POR-----\n1. Nombre \n2. Horas Trabajadas \n3. Sueldo", "Error, opcion incorrecta\n", 1, 3, 2);
 		switch(option)
 		{
 			case 1:
-				//pOrden=employee_sortNombre;
+				pOrden=employee_sortNombre;
 				break;
 			case 2:
-				//pOrden=employee_sortHoras;
+				pOrden=employee_sortHoras;
 				break;
 			case 3:
 				pOrden=employee_sortSueldo;
 				break;
 		}//FIN SWITCH
-		ll_sort(pArrayListEmployee, pOrden, 1);
+		utn_getNumero(&option, "-----CRITERIOR-----\n1. Ascendente(A-Z)\n0. Descendente(Z-A)\n", "Error, opcion incorrecta", 0, 1, 2);
+		ll_sort(pArrayListEmployee, pOrden, option);
 	}
-//	if(array!=NULL && pFuncion!=NULL)
-//		{
-//			for(int i=0; i<cantidadDeArray-1; i++)
-//			{
-//				for(int j=i+1; j<cantidadDeArray; j++)
-//				{
-//					switch(criterio)
-//					{
-//					 case 0:
-//						if(pFuncion((array+i), (array+j))>0)
-//						{
-//							 aux = *(array+i);
-//							*(array+i) = *(array+j);
-//							*(array+j) = aux;
-//
-//							retorno=0;
-//						}
-//						break;
-//					 case 1:
-//						 if(pFuncion((array+i), (array+j))<0)
-//						{
-//							 aux = *(array+i);
-//							*(array+i) = *(array+j);
-//							*(array+j) = aux;
-//
-//							retorno=0;
-//						}
-//						break;
-//					}
-//				}
-//			}
-//		}
     return retorno;
 }
 
@@ -369,7 +333,22 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+	int retorno = -1;
+	if(path!=NULL && pArrayListEmployee!=NULL)
+	{
+		FILE* pFile=fopen(path,"w");
+		if(parser_EmployeeToText(pFile,pArrayListEmployee)==0)
+		{
+			printf("Archivo bien escrito. Guardado correctamente\n");
+			retorno=0;
+		}
+		else
+		{
+			printf("No se pudo escribir el archivo\n");
+		}
+		fclose(pFile);
+	}
+	return retorno;
 }
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo binario).
@@ -381,6 +360,21 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+	int retorno = -1;
+	if(path!=NULL && pArrayListEmployee!=NULL)
+	{
+		FILE* pFile=fopen(path,"wb");
+		if(parser_EmployeeToBinary(pFile,pArrayListEmployee)!=0)
+		{
+			printf("No se pudo escribir el archivo\n");
+		}
+		else
+		{
+			printf("Archivo bien escrito. Guardado correctamente\n");
+			retorno=0;
+		}
+		fclose(pFile);
+	}
+    return retorno;
 }
 

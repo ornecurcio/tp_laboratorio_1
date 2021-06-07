@@ -26,6 +26,7 @@ int main()
     int option;
     int flag=0;
 
+
     LinkedList* listaEmpleados = ll_newLinkedList();
     do{
     	if(utn_getNumero(&option,"Seleccione una opcion\n1. Cargar los datos de los empleados desde el archivo data.csv (modo texto)\n"
@@ -43,8 +44,16 @@ int main()
 				case 1:
 					if(flag==0)
 					{
-						controller_loadFromText("data.csv",listaEmpleados);
-						flag=1;
+						utn_getNumero(&flag, "Desea abrir: \n1. data.csv \n2.Chequeo.csv", "Error, opcion incorrecta", 1, 2, 1);
+						switch(flag)
+						{
+						case 1:
+							controller_loadFromText("data.csv",listaEmpleados);
+							break;
+						case 2:
+							controller_loadFromText("Chequeo.csv",listaEmpleados);
+							break;
+						}
 					}
 					else
 					{
@@ -54,20 +63,22 @@ int main()
 				case 2:
 					if(flag==0)
 					{
-						controller_loadFromBinary("data.bin",listaEmpleados);
+						utn_getNumero(&flag, "Desea abrir: \n1. data.bin \n2.Chequeo.bin", "Error, opcion incorrecta", 1, 2, 1);
+						switch(flag)
+						{
+						case 1:
+							controller_loadFromBinary("data.bin",listaEmpleados);
+							break;
+						case 2:
+							controller_loadFromBinary("Chequeo.bin",listaEmpleados);
+							break;
+						}
 					}
 					else
 					{
 						printf("El archivo ya fue cargado\n");
 					}
-//					auxCantLink=ll_len(listaEmpleados);
-//					f2=fopen("data.bin","wb");
-//					for(int i=0; i<auxCantLink; i++)
-//					{
-//						pAuxEmpleado = (Employee*)ll_get(listaEmpleados, i);
-//					 fwrite(pAuxEmpleado, sizeof(Employee),1,f2);
-//					}
-//					fclose(f2);
+
 					break;
 				case 3:
 					controller_addEmployee(listaEmpleados);
@@ -85,10 +96,10 @@ int main()
 					controller_sortEmployee(listaEmpleados);
 					break;
 				case 8:
-					//controller_saveAsText("data2.csv",listaEmpleados);
+					controller_saveAsText("Chequeo.csv",listaEmpleados);
 					break;
 				case 9:
-					//controller_saveAsBinary("data2.bin",listaEmpleados);
+					controller_saveAsBinary("Chequeo.bin",listaEmpleados);
 					break;
 			}
     	}

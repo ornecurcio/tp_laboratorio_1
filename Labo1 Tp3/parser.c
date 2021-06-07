@@ -80,3 +80,49 @@ int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 	}
 	return retorno;
 }
+int parser_EmployeeToBinary(FILE* pFile , LinkedList* pArrayListEmployee)
+{
+	int retorno = -1;
+	int retornoLeido;
+	int auxCantLink;
+	Employee* pAuxEmpleado=NULL;
+	if(pFile!=NULL && pArrayListEmployee!=NULL)
+	{
+		auxCantLink=ll_len(pArrayListEmployee);
+		for(int i=0; i<auxCantLink; i++)
+		{
+			pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
+			retornoLeido=fwrite(pAuxEmpleado, sizeof(Employee),1,pFile);
+			if(retornoLeido!=1)
+			{
+				employee_delete(pAuxEmpleado);
+				break;
+				retorno=-1;
+			}
+			else
+			{
+				retorno=0;
+			}
+		}
+	}
+	return retorno;
+}
+int parser_EmployeeToText(FILE* pFile , LinkedList* pArrayListEmployee)
+{
+	int retorno=-1;
+	int auxCantLink;
+	Employee* pAuxEmpleado=NULL;
+	if(pFile!=NULL && pArrayListEmployee!=NULL)
+	{
+		auxCantLink=ll_len(pArrayListEmployee);
+		for(int i=0; i<auxCantLink; i++)
+		{
+			pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
+			fprintf(pFile,"%d %s %d %d",(*(pAuxEmpleado+i)).id, (*(pAuxEmpleado+i)).nombre, (*(pAuxEmpleado+i)).horasTrabajadas, (*(pAuxEmpleado+i)).sueldo);
+			//printf("%d %s %d %d\n",(*(pAuxEmpleado+i)).id, (*(pAuxEmpleado+i)).nombre, (*(pAuxEmpleado+i)).horasTrabajadas, (*(pAuxEmpleado+i)).sueldo);
+			retorno=0;
+		}
+		printf("el retorno de parser es %d", retorno);
+	}
+	return retorno;
+}
