@@ -232,7 +232,7 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 				numMax=auxId;
 			}
 		}
-		utn_getNumero(&id, "Ingrese Id de persona a modificar", "Error, ingrese valor numerico", 0, auxId, 2);
+		utn_getNumero(&id, "Ingrese Id de persona a borrar", "Error, ingrese valor numerico", 0, auxId, 2);
 		for(i=0; i<cantidadLinkedList ; i++)
 		{
 			pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
