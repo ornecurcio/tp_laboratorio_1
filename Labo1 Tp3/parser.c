@@ -112,17 +112,28 @@ int parser_EmployeeToText(FILE* pFile , LinkedList* pArrayListEmployee)
 	int retorno=-1;
 	int auxCantLink;
 	Employee* pAuxEmpleado=NULL;
+	int auxId, auxHoras, auxSueldo;
+	char auxNombre[128];
+
 	if(pFile!=NULL && pArrayListEmployee!=NULL)
 	{
 		auxCantLink=ll_len(pArrayListEmployee);
 		for(int i=0; i<auxCantLink; i++)
 		{
 			pAuxEmpleado = (Employee*)ll_get(pArrayListEmployee, i);
-			fprintf(pFile,"%d %s %d %d",(*(pAuxEmpleado+i)).id, (*(pAuxEmpleado+i)).nombre, (*(pAuxEmpleado+i)).horasTrabajadas, (*(pAuxEmpleado+i)).sueldo);
+
+			if(employee_getId(pAuxEmpleado, &auxId)==0 &&
+			   employee_getNombre(pAuxEmpleado, auxNombre)==0 &&
+			   employee_getHorasTrabajadas(pAuxEmpleado, &auxHoras)==0 &&
+			   employee_getSueldo(pAuxEmpleado, &auxSueldo)==0)
+			{
+				//fprintf(pFile,"%d, %s, %d, %d\n",(*(pAuxEmpleado+i)).id, (*(pAuxEmpleado+i)).nombre, (*(pAuxEmpleado+i)).horasTrabajadas, (*(pAuxEmpleado+i)).sueldo);
+				fprintf(pFile,"%d, %s, %d, %d\n",auxId, auxNombre, auxHoras, auxSueldo);
+			}
 			//printf("%d %s %d %d\n",(*(pAuxEmpleado+i)).id, (*(pAuxEmpleado+i)).nombre, (*(pAuxEmpleado+i)).horasTrabajadas, (*(pAuxEmpleado+i)).sueldo);
 			retorno=0;
 		}
-		printf("el retorno de parser es %d", retorno);
+
 	}
 	return retorno;
 }
