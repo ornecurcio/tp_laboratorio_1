@@ -23,7 +23,10 @@ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
 
 int employee_setSueldo(Employee* this,int sueldo);
 int employee_getSueldo(Employee* this,int* sueldo);
+
 void employee_print(Employee* this);
+
+int employee_sortId(void* thisOne, void* thisTwo);
 int employee_sortSueldo(void* thisOne, void* thisTwo);
 int employee_sortHoras(void* thisOne, void* thisTwo);
 int employee_sortNombre(void* thisOne, void* thisTwo);

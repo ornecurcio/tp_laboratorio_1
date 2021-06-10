@@ -108,27 +108,56 @@ int employee_getSueldo(Employee* this,int* sueldo)
 	}
 	return retorno;
 }
+
 void employee_print(Employee* this)
 {
-	printf("Id: %d - Nombre: %s - Horas Trabajadas: %d - Sueldo: %d\n",(*(this)).id, (*(this)).nombre,
-																	   (*(this)).horasTrabajadas, (*(this)).sueldo);
+	int auxId, auxHoras, auxSueldo;
+	char auxNombre[128];
+	if(employee_getId(this, &auxId)==0 && employee_getNombre(this, auxNombre)==0 &&
+	   employee_getHorasTrabajadas(this, &auxHoras)==0 && employee_getSueldo(this, &auxSueldo)==0)
+	{
+		printf("Id: %d - Nombre: %s - Horas Trabajadas: %d - Sueldo: %d\n",auxId, auxNombre,auxHoras,auxSueldo);
+	}
+	//printf("Id: %d - Nombre: %s - Horas Trabajadas: %d - Sueldo: %d\n",(*(this)).id, (*(this)).nombre,(*(this)).horasTrabajadas, (*(this)).sueldo);
+}
+int employee_sortId(void* thisOne, void* thisTwo)
+{
+	int retorno=0;
+	int auxId1, auxId2;
+
+	if(thisOne!=NULL && thisTwo!=NULL)
+	{
+		if(employee_getId((Employee*)thisOne, &auxId1)==0 && employee_getId((Employee*)thisTwo, &auxId2)==0)
+		{
+			if(auxId1 > auxId2)
+			{
+				retorno=1;
+			}
+			if( auxId1 < auxId2 )
+			{
+				retorno=-1;
+			}
+		}
+	}
+	return retorno;
 }
 int employee_sortSueldo(void* thisOne, void* thisTwo)
 {
-	int retorno=-1;
-	Employee* pAuxEmpleado1;
-	Employee* pAuxEmpleado2;
+	int retorno=0;
+	int auxSueldo1, auxSueldo2;
+
 	if(thisOne!=NULL && thisTwo!=NULL)
 	{
-		pAuxEmpleado1=(Employee*)thisOne;
-		pAuxEmpleado2=(Employee*)thisTwo;
-		if( (*(pAuxEmpleado1)).sueldo > (*(pAuxEmpleado2)).sueldo )
+		if(employee_getSueldo((Employee*)thisOne, &auxSueldo1)==0 && employee_getSueldo((Employee*)thisTwo, &auxSueldo2)==0)
 		{
-			retorno=1;
-		}
-		if( (*(pAuxEmpleado1)).sueldo < (*(pAuxEmpleado2)).sueldo )
-		{
-			retorno=-1;
+			if(auxSueldo1 > auxSueldo2)
+			{
+				retorno=1;
+			}
+			if(auxSueldo1 < auxSueldo2)
+			{
+				retorno=-1;
+			}
 		}
 	}
 	return retorno;
@@ -136,19 +165,19 @@ int employee_sortSueldo(void* thisOne, void* thisTwo)
 int employee_sortHoras(void* thisOne, void* thisTwo)
 {
 	int retorno=0;
-	Employee* pAuxEmpleado1;
-	Employee* pAuxEmpleado2;
+
+	int auxHoras1, auxHoras2;
 	if(thisOne!=NULL && thisTwo!=NULL)
 	{
-		pAuxEmpleado1=(Employee*)thisOne;
-		pAuxEmpleado2=(Employee*)thisTwo;
-		if( (*(pAuxEmpleado1)).horasTrabajadas > (*(pAuxEmpleado2)).horasTrabajadas )
-		{
-			retorno=1;
-		}
-		if( (*(pAuxEmpleado1)).horasTrabajadas < (*(pAuxEmpleado2)).horasTrabajadas )
-		{
-			retorno=-1;
+		if(employee_getHorasTrabajadas((Employee*)thisOne, &auxHoras1)==0 && employee_getHorasTrabajadas((Employee*)thisTwo, &auxHoras2)==0)
+		{	if(auxHoras1 > auxHoras2)
+			{
+				retorno=1;
+			}
+			if(auxHoras1 < auxHoras2)
+			{
+				retorno=-1;
+			}
 		}
 	}
 	return retorno;
@@ -156,19 +185,19 @@ int employee_sortHoras(void* thisOne, void* thisTwo)
 int employee_sortNombre(void* thisOne, void* thisTwo)
 {
 	int retorno=0;
-	Employee* pAuxEmpleado1;
-	Employee* pAuxEmpleado2;
+	char auxNombre1[128],auxNombre2[128];
 	if(thisOne!=NULL && thisTwo!=NULL)
 	{
-		pAuxEmpleado1=(Employee*)thisOne;
-		pAuxEmpleado2=(Employee*)thisTwo;
-		if(strcmp((*(pAuxEmpleado1)).nombre,(*(pAuxEmpleado2)).nombre)>0)
+		if(employee_getNombre((Employee*)thisOne, auxNombre1)==0 && employee_getNombre((Employee*)thisTwo, auxNombre2)==0)
 		{
-			retorno=1;
-		}
-		if(strcmp((*(pAuxEmpleado1)).nombre,(*(pAuxEmpleado2)).nombre)<0)
-		{
-			retorno=-1;
+			if(strcmp(auxNombre1,auxNombre2)>0)
+			{
+				retorno=1;
+			}
+			if(strcmp(auxNombre1,auxNombre2)<0)
+			{
+				retorno=-1;
+			}
 		}
 	}
 	return retorno;

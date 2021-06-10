@@ -380,7 +380,7 @@ int utn_getNombre(char* pResultado, char* mensaje, char* mensajeError,int reinte
 		do
 		{
 			printf("%s",mensaje);
-			if(getNombre(bufferString, 1000)==0)
+			if(getNombre(bufferString, 1000)==0 && esLetraConEspacio(bufferString)==1)
 			{
 				strncpy(pResultado,bufferString,longitud);
 				retorno = 0;
@@ -489,6 +489,62 @@ int utn_getCUIT(char* pResultado, char* mensaje, char* mensajeError, int reinten
         while(reintentos>=0);
     }
     return retorno;
+}
+
+int esArchivo(char* cadena)
+{
+    int retorno=1;
+    int i;
+    char buffer[1000];
+    int contadorPunto=0;
+    strcpy(buffer,cadena);
+    for(i=0;buffer[i]!='\0';i++)
+    {
+        if((isalpha(buffer[i])!=0) || (buffer[i]=='.') || (isdigit(buffer[i])!=0))
+        {
+            continue;
+        }
+        else
+        {
+        	retorno=0;
+        	break;
+        }
+        if(buffer[i]=='.')
+		{
+			contadorPunto++;
+		}
+    }
+	if(contadorPunto==1)
+	{
+		retorno=1;
+	}
+    return retorno;
+}
+
+int utn_getArchivo(char* pResultado, char* mensaje, char* mensajeError, int reintentos, int longitud)
+{
+	    int retorno=-1;
+	    char bufferStr[longitud];
+	    if(mensaje!=NULL && mensajeError!=NULL && reintentos>=0 && pResultado!=NULL)
+	    {
+	        do
+	        {
+	        	printf("%s",mensaje);
+	            if((myGets(bufferStr, longitud)==0) && (esArchivo(bufferStr)==1))
+				{
+	                strncpy(pResultado,bufferStr,longitud);
+	                retorno=0;
+	                break;
+	            }
+	            else
+	            {
+	                printf("%s",mensajeError);
+	                reintentos--;
+	            }
+	        }
+	        while(reintentos>=0);
+	    }
+	    return retorno;
 }
 //-------ARRAY cosas----
 void inicializarArrayChar(char pArray[], int cantidadDeArray)
