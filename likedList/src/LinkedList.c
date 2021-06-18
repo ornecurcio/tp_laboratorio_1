@@ -417,23 +417,16 @@ int ll_containsAll(LinkedList* this,LinkedList* this2)
     void* auxElement=NULL;
     if(this!=NULL && this2!=NULL)
     {
-    	if(ll_len(this)!=ll_len(this2))
-    	{
-    		returnAux=0;
-    	}
-    	else
-    	{
-    		returnAux=1;
-			for(int i=0; i<ll_len(this2); i++)
+		returnAux=1;
+		for(int i=0; i<ll_len(this2); i++)
+		{
+			auxElement=ll_get(this2, i);
+			if(ll_contains(this, auxElement)==0)
 			{
-				auxElement=ll_get(this2, i);
-				if(ll_contains(this, auxElement)==0)
-				{
-					returnAux=0;
-					break;
-				}
+				returnAux=0;
+				break;
 			}
-    	}
+		}
     }
     return returnAux;
 }
@@ -452,7 +445,7 @@ LinkedList* ll_subList(LinkedList* this,int from,int to)
 {
     LinkedList* cloneArray=NULL;
     void* auxElement=NULL;
-    if(this!=NULL && from>=0 && from<=ll_len(this) && to>=0 && to<=ll_len(this))
+    if(this!=NULL && from>=0 && to>from && to<=ll_len(this))
     {
     	cloneArray=ll_newLinkedList();
     	if(cloneArray!=NULL)
@@ -502,34 +495,19 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 	{
 		for(int i=0; i<ll_len(this)-1; i++)
 		{
-			aux=ll_get(this, i);
 			for(int j=i+1; j<ll_len(this); j++)
 			{
+				aux=ll_get(this, i);
 				aux2=ll_get(this, j);
-				switch(order)
+				if(((pFunc((aux), (aux2))>0) && order==0) || ((pFunc((aux), (aux2))<0) && order==1))
 				{
-				 case 0:
-					if(pFunc((aux), (aux2))>0)
-					{
-						 auxElement = aux;
-						 aux = aux2;
-						 aux2 = auxElement;
-					}
-					returnAux=1;
-					break;
-				 case 1:
-					 if(pFunc((aux), (aux2))<0)
-					{
-						 auxElement = aux;
-						 aux = aux2;
-						 aux2 = auxElement;
-					}
-					 returnAux=1;
-					break;
+					 auxElement = aux;
+					 aux = aux2;
+					 aux2 = auxElement;
 				}
-				ll_set(this, j, aux2);
+				ll_set(this, j, aux);
+				ll_set(this, i, aux2);
 			}
-			ll_set(this, i, aux);
 		}
 		returnAux=0;
 	}
