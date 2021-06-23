@@ -1,93 +1,10 @@
-22:34:46 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
+18:55:38 **** Rebuild of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia
-22:50:28 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
-..\src\Controller.c: In function 'controller_putInDisEmployee':
-..\src\Controller.c:562:14: warning: unused variable 'pArrayListEmployee2' [-Wunused-variable]
-  562 |  LinkedList* pArrayListEmployee2=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia
-22:52:10 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
-gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia
-22:55:51 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Labo1 Tp4 con LinkedList propia.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-22:56:08 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
-Info: Internal Builder is used for build
-gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-22:56:59 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
-..\src\Controller.c: In function 'controller_putInDisEmployee':
-..\src\Controller.c:562:14: warning: unused variable 'pArrayListEmployee2' [-Wunused-variable]
-  562 |  LinkedList* pArrayListEmployee2=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia
-23:08:24 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
-Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\UTN.o" "..\\src\\UTN.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Employee.o" "..\\src\\Employee.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
-..\src\Controller.c: In function 'controller_putInDisEmployee':
-..\src\Controller.c:562:14: warning: unused variable 'pArrayListEmployee2' [-Wunused-variable]
-  562 |  LinkedList* pArrayListEmployee2=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia
-23:08:43 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
-..\src\Controller.c: In function 'controller_putInDisEmployee':
-..\src\Controller.c:562:14: warning: unused variable 'pArrayListEmployee2' [-Wunused-variable]
-  562 |  LinkedList* pArrayListEmployee2=NULL;
-      |              ^~~~~~~~~~~~~~~~~~~
-gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia
-23:14:16 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Employee.o" "..\\src\\Employee.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
-gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia
-23:17:52 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
-gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia
-23:33:04 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia
-23:33:57 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia
-23:41:36 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
-Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
 gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
-Info: Nothing to build for Labo1 Tp4 con LinkedList propia

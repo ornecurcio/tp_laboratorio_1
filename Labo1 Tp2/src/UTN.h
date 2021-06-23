@@ -155,4 +155,7 @@ void FormaApellidoNombre(char *pNombre, char *pApellido, char *pCompleto);
  * \return (-1) Error / (0) Ok
  */
 int utn_getCaracterSN(void);
+int esArchivo(char* cadena);
+int esArchivoCsv(char* cadena);
+int utn_getArchivo(char* pResultado, char* mensaje, char* mensajeError, int reintentos, int longitud);
 #endif /* UTN_H_ */

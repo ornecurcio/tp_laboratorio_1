@@ -18,12 +18,13 @@ int menu(void)
 	    			"2. Cargar los datos de los empleados desde el archivo data.bin (modo binario)\n"
 	    			"3. Alta de empleado\n4. Modificar datos de empleado\n5. Baja de empleado\n6. Listar empleados\n7. Ordenar empleados\n"
 	    			"8. Guardar los datos de los empleados en archivo tipo .csv (modo texto)\n"
-	    			"9. Guardar los datos de los empleados en archivo tipo .bin (modo binario)\n10. Salir",
+	    			"9. Guardar los datos de los empleados en archivo tipo .bin (modo binario)\n10. Aumento-Descuento de Sueldo\n11. Salir\n",
 	    					"------- Error ingrese ------ \n1. Cargar los datos de los empleados desde el archivo data.csv (modo texto)\n"
 	    			"2. Cargar los datos de los empleados desde el archivo data.bin (modo binario)\n"
 	    			"3. Alta de empleado\n4. Modificar datos de empleado\n5. Baja de empleado\n6. Listar empleados\n7. Ordenar empleados\n"
 	    			"8. Guardar los datos de los empleados en archivo tipo .csv (modo texto)\n"
-	    			"9. Guardar los datos de los empleados en archivo tipo .bin (modo binario)\n10. Salir\n", 1, 10, 2)==0){
+	    			"9. Guardar los datos de los empleados en archivo tipo .bin (modo binario)\n"
+	    			"10. Aumento-Descuento de Sueldo\n11. Salir\n", 1, 11, 2)==0){
 				switch(option)
 				{
 					case 1:
@@ -108,34 +109,36 @@ int menu(void)
 						}
 						break;
 					case 9:
+						utn_getNumero(&flag2, "Desea guardar en: \n1. data.bin \n2. Chequeo.bin \n3. Nuevo archivo", "Error, opcion incorrecta", 1, 3, 1);
+						switch(flag2)
+						{
+						case 1:
+							controller_saveAsBinary("data.bin",listaEmpleados);
+							break;
+						case 2:
+							controller_saveAsBinary("Chequeo.bin",listaEmpleados);
+							break;
+						case 3:
+							if((utn_getArchivo(path, "Ingrese nombre de archivo","Error, no es valido caracter especial, no olvide el .bin", 2, 30))==0)
+							{
+								controller_saveAsBinary(path,listaEmpleados);
+							}
+							else
+							{
+								flag2=0;
+							}
+							break;
+						}
+						break;
+					case 10:
 						controller_putInDisEmployee(listaEmpleados);
 						printf("Desea imprimir nueva lista?. ");
 						if(utn_getCaracterSN()==0)
 						{
 							controller_ListEmployee(listaEmpleados);
 						}
-//						utn_getNumero(&flag2, "Desea guardar en: \n1. data.bin \n2. Chequeo.bin \n3. Nuevo archivo", "Error, opcion incorrecta", 1, 3, 1);
-//						switch(flag2)
-//						{
-//						case 1:
-//							controller_saveAsBinary("data.bin",listaEmpleados);
-//							break;
-//						case 2:
-//							controller_saveAsBinary("Chequeo.bin",listaEmpleados);
-//							break;
-//						case 3:
-//							if((utn_getArchivo(path, "Ingrese nombre de archivo","Error, no es valido caracter especial, no olvide el .bin", 2, 30))==0)
-//							{
-//								controller_saveAsBinary(path,listaEmpleados);
-//							}
-//							else
-//							{
-//								flag2=0;
-//							}
-//							break;
-//						}
 						break;
-					case 10:
+					case 11:
 						if(ll_isEmpty(listaEmpleados)==0 && flag2==0)
 						{
 							printf("Se encuentra una lista con datos en ejecucion, desea salir sin guardar? ");
@@ -151,7 +154,7 @@ int menu(void)
 						break;
 				}
 	    	}
-	    }while(option != 10);
+	    }while(option != 11);
 	return 0;
 }
 

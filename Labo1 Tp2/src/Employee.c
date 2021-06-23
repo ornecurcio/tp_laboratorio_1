@@ -57,8 +57,8 @@ int altaEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId)
 		}
 		else
 		{
-			if((utn_getString(aAuxiliar.lastName, "Ingrese Apellido", "Error, ingrese Apellido", 2)==0)&&
-			(utn_getString(aAuxiliar.name, "Ingrese Nombre", "Error, ingrese Nombre", 2)==0)&&
+			if((utn_getNombre(aAuxiliar.lastName, "Ingrese Apellido", "Error, ingrese Apellido", 2, 51)==0)&&
+			(utn_getNombre(aAuxiliar.name, "Ingrese Nombre", "Error, ingrese Nombre", 2, 51)==0)&&
 			(utn_getNumeroFlotante(&aAuxiliar.salary,"Ingrese salario","Error, ingrese salario entre 300-3000",300,3000,2)==0)&&
 			(utn_getNumero(&aAuxiliar.sector, "Ingrese sector","Error, ingrese sector de 1 a 20", 1, 20, 2)==0))
 			{
@@ -123,11 +123,10 @@ int buscaEmployeeById(eEmployee aAuxiliar[], int cantidadDeArray)
 				retorno = i;
 				break;
 			}
-			else
-			{
-				printf("El numero de ID %d no existe", aID);
-				break;
-			}
+		}
+		if(retorno==-1)
+		{
+			printf("El numero de ID %d no existe", aID);
 		}
 	}
 	return retorno;

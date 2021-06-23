@@ -511,24 +511,19 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
     return returnAux;
 
 }
-//LinkedList* ll_map(LinkedList* this, void (*pFunc)(void* element))
-int ll_map(LinkedList* this, void (*pFunc)(void* element))
+LinkedList* ll_map(LinkedList* this, void (*pFunc)(void* element))
+//int ll_map(LinkedList* this, void (*pFunc)(void* element))
 {
-//	LinkedList* cloneArray=NULL;
-	int retorno=-1;
+	//int retorno=-1;
 	void* aux=NULL;
 	if(this!=NULL && pFunc!=NULL)
 	{
-//		cloneArray=ll_clone(this);
-//		if(cloneArray!=NULL)
-//		{
-		retorno=0;
-			for(int i=0; i<ll_len(this); i++)
-			{
-				aux=ll_get(this, i);
-				pFunc(aux);
-			}
-//		}
+		//retorno=0;
+		for(int i=0; i<ll_len(this); i++)
+		{
+			aux=ll_get(this, i);
+			pFunc(aux);
+		}
 	}
-	return retorno;
+	return this;
 }
