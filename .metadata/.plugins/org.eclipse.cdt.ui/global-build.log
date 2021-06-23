@@ -1,515 +1,93 @@
-11:35:22 **** Incremental Build of configuration Debug for project likedList ****
+22:34:46 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
+22:50:28 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+..\src\Controller.c: In function 'controller_putInDisEmployee':
+..\src\Controller.c:562:14: warning: unused variable 'pArrayListEmployee2' [-Wunused-variable]
+  562 |  LinkedList* pArrayListEmployee2=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
+22:52:10 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-11:42:54 **** Incremental Build of configuration Debug for project likedList ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
+22:55:51 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-11:48:10 **** Incremental Build of configuration Debug for project likedList ****
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Labo1 Tp4 con LinkedList propia.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:56:08 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-11:48:27 **** Incremental Build of configuration Debug for project likedList ****
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+22:56:59 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:00:18 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-12:00:30 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:14:10 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:15:33 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:16:54 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:20:22 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:24:53 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:38:48 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:42:16 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:43:18 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:43:54 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:45:32 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:52:14 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-12:52:26 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:53:16 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:54:03 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-12:57:16 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-13:07:19 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-..\src\LinkedList.c: In function 'll_sort':
-..\src\LinkedList.c:518:9: warning: implicit declaration of function 'pFuncion'; did you mean 'pFunc'? [-Wimplicit-function-declaration]
-  518 |      if(pFuncion((this+i), (this+j))>0)
-      |         ^~~~~~~~
-      |         pFunc
-..\src\LinkedList.c:520:21: error: incompatible types when assigning to type 'void *' from type 'LinkedList' {aka 'struct LinkedList'}
-  520 |        auxElement = *(this+i);
-      |                     ^
-..\src\LinkedList.c:522:19: error: incompatible types when assigning to type 'LinkedList' {aka 'struct LinkedList'} from type 'void *'
-  522 |       *(this+j) = auxElement;
-      |                   ^~~~~~~~~~
-..\src\LinkedList.c:530:21: error: incompatible types when assigning to type 'void *' from type 'LinkedList' {aka 'struct LinkedList'}
-  530 |        auxElement = *(this+i);
-      |                     ^
-..\src\LinkedList.c:532:19: error: incompatible types when assigning to type 'LinkedList' {aka 'struct LinkedList'} from type 'void *'
-  532 |       *(this+j) = auxElement;
-      |                   ^~~~~~~~~~
-13:09:15 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-..\src\LinkedList.c: In function 'll_sort':
-..\src\LinkedList.c:518:9: warning: implicit declaration of function 'pFuncion'; did you mean 'pFunc'? [-Wimplicit-function-declaration]
-  518 |      if(pFuncion((void+i), (void+j))>0)
-      |         ^~~~~~~~
-      |         pFunc
-..\src\LinkedList.c:518:23: error: expected ')' before '+' token
-  518 |      if(pFuncion((void+i), (void+j))>0)
-      |                  ~    ^
-      |                       )
-..\src\LinkedList.c:518:26: error: expected expression before ',' token
-  518 |      if(pFuncion((void+i), (void+j))>0)
-      |                          ^
-..\src\LinkedList.c:518:36: error: expected expression before ')' token
-  518 |      if(pFuncion((void+i), (void+j))>0)
-      |                                    ^
-..\src\LinkedList.c:520:27: error: expected ')' before '+' token
-  520 |        auxElement = *(void+i);
-      |                      ~    ^
-      |                           )
-..\src\LinkedList.c:520:30: error: expected expression before ';' token
-  520 |        auxElement = *(void+i);
-      |                              ^
-..\src\LinkedList.c:521:13: error: expected ')' before '+' token
-  521 |       *(void+i) = *(void+j);
-      |        ~    ^
-      |             )
-..\src\LinkedList.c:521:17: error: expected expression before '=' token
-  521 |       *(void+i) = *(void+j);
-      |                 ^
-..\src\LinkedList.c:521:28: error: expected expression before ';' token
-  521 |       *(void+i) = *(void+j);
-      |                            ^
-..\src\LinkedList.c:522:13: error: expected ')' before '+' token
-  522 |       *(void+j) = auxElement;
-      |        ~    ^
-      |             )
-..\src\LinkedList.c:522:17: error: expected expression before '=' token
-  522 |       *(void+j) = auxElement;
-      |                 ^
-..\src\LinkedList.c:528:24: error: expected ')' before '+' token
-  528 |       if(pFuncion((void+i), (void+j))<0)
-      |                   ~    ^
-      |                        )
-..\src\LinkedList.c:528:27: error: expected expression before ',' token
-  528 |       if(pFuncion((void+i), (void+j))<0)
-      |                           ^
-..\src\LinkedList.c:528:37: error: expected expression before ')' token
-  528 |       if(pFuncion((void+i), (void+j))<0)
-      |                                     ^
-..\src\LinkedList.c:530:27: error: expected ')' before '+' token
-  530 |        auxElement = *(void+i);
-      |                      ~    ^
-      |                           )
-..\src\LinkedList.c:530:30: error: expected expression before ';' token
-  530 |        auxElement = *(void+i);
-      |                              ^
-..\src\LinkedList.c:531:13: error: expected ')' before '+' token
-  531 |       *(void+i) = *(void+j);
-      |        ~    ^
-      |             )
-..\src\LinkedList.c:531:17: error: expected expression before '=' token
-  531 |       *(void+i) = *(void+j);
-      |                 ^
-..\src\LinkedList.c:531:28: error: expected expression before ';' token
-  531 |       *(void+i) = *(void+j);
-      |                            ^
-..\src\LinkedList.c:532:13: error: expected ')' before '+' token
-  532 |       *(void+j) = auxElement;
-      |        ~    ^
-      |             )
-..\src\LinkedList.c:532:17: error: expected expression before '=' token
-  532 |       *(void+j) = auxElement;
-      |                 ^
-13:39:45 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-..\src\LinkedList.c: In function 'll_sort':
-..\src\LinkedList.c:521:21: warning: dereferencing 'void *' pointer
-  521 |        auxElement = *(aux+i);
-      |                     ^~~~~~~~
-..\src\LinkedList.c:521:19: error: void value not ignored as it ought to be
-  521 |        auxElement = *(aux+i);
-      |                   ^
-..\src\LinkedList.c:522:7: warning: dereferencing 'void *' pointer
-  522 |       *(aux+i) = *(aux+j);
-      |       ^~~~~~~~
-..\src\LinkedList.c:522:18: warning: dereferencing 'void *' pointer
-  522 |       *(aux+i) = *(aux+j);
-      |                  ^~~~~~~~
-..\src\LinkedList.c:522:16: error: invalid use of void expression
-  522 |       *(aux+i) = *(aux+j);
-      |                ^
-..\src\LinkedList.c:523:7: warning: dereferencing 'void *' pointer
-  523 |       *(aux+j) = auxElement;
-      |       ^~~~~~~~
-..\src\LinkedList.c:523:16: error: invalid use of void expression
-  523 |       *(aux+j) = auxElement;
-      |                ^
-..\src\LinkedList.c:531:21: warning: dereferencing 'void *' pointer
-  531 |        auxElement = *(aux+i);
-      |                     ^~~~~~~~
-..\src\LinkedList.c:531:19: error: void value not ignored as it ought to be
-  531 |        auxElement = *(aux+i);
-      |                   ^
-..\src\LinkedList.c:532:7: warning: dereferencing 'void *' pointer
-  532 |       *(aux+i) = *(aux+j);
-      |       ^~~~~~~~
-..\src\LinkedList.c:532:18: warning: dereferencing 'void *' pointer
-  532 |       *(aux+i) = *(aux+j);
-      |                  ^~~~~~~~
-..\src\LinkedList.c:532:16: error: invalid use of void expression
-  532 |       *(aux+i) = *(aux+j);
-      |                ^
-..\src\LinkedList.c:533:7: warning: dereferencing 'void *' pointer
-  533 |       *(aux+j) = auxElement;
-      |       ^~~~~~~~
-..\src\LinkedList.c:533:16: error: invalid use of void expression
-  533 |       *(aux+j) = auxElement;
-      |                ^
-13:42:16 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-..\src\LinkedList.c: In function 'll_sort':
-..\src\LinkedList.c:522:21: warning: dereferencing 'void *' pointer
-  522 |        auxElement = *(aux+i);
-      |                     ^~~~~~~~
-..\src\LinkedList.c:522:19: error: void value not ignored as it ought to be
-  522 |        auxElement = *(aux+i);
-      |                   ^
-..\src\LinkedList.c:523:7: warning: dereferencing 'void *' pointer
-  523 |       *(aux+i) = *(aux+j);
-      |       ^~~~~~~~
-..\src\LinkedList.c:523:18: warning: dereferencing 'void *' pointer
-  523 |       *(aux+i) = *(aux+j);
-      |                  ^~~~~~~~
-..\src\LinkedList.c:523:16: error: invalid use of void expression
-  523 |       *(aux+i) = *(aux+j);
-      |                ^
-..\src\LinkedList.c:524:7: warning: dereferencing 'void *' pointer
-  524 |       *(aux+j) = auxElement;
-      |       ^~~~~~~~
-..\src\LinkedList.c:524:16: error: invalid use of void expression
-  524 |       *(aux+j) = auxElement;
-      |                ^
-..\src\LinkedList.c:532:21: warning: dereferencing 'void *' pointer
-  532 |        auxElement = *(aux+i);
-      |                     ^~~~~~~~
-..\src\LinkedList.c:532:19: error: void value not ignored as it ought to be
-  532 |        auxElement = *(aux+i);
-      |                   ^
-..\src\LinkedList.c:533:7: warning: dereferencing 'void *' pointer
-  533 |       *(aux+i) = *(aux+j);
-      |       ^~~~~~~~
-..\src\LinkedList.c:533:18: warning: dereferencing 'void *' pointer
-  533 |       *(aux+i) = *(aux+j);
-      |                  ^~~~~~~~
-..\src\LinkedList.c:533:16: error: invalid use of void expression
-  533 |       *(aux+i) = *(aux+j);
-      |                ^
-..\src\LinkedList.c:534:7: warning: dereferencing 'void *' pointer
-  534 |       *(aux+j) = auxElement;
-      |       ^~~~~~~~
-..\src\LinkedList.c:534:16: error: invalid use of void expression
-  534 |       *(aux+j) = auxElement;
-      |                ^
-13:43:31 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-..\src\LinkedList.c: In function 'll_sort':
-..\src\LinkedList.c:523:15: error: lvalue required as left operand of assignment
-  523 |       (aux+i) = (aux+j);
-      |               ^
-..\src\LinkedList.c:524:15: error: lvalue required as left operand of assignment
-  524 |       (aux+j) = auxElement;
-      |               ^
-..\src\LinkedList.c:533:15: error: lvalue required as left operand of assignment
-  533 |       (aux+i) = (aux+j);
-      |               ^
-..\src\LinkedList.c:534:15: error: lvalue required as left operand of assignment
-  534 |       (aux+j) = auxElement;
-      |               ^
-13:54:47 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-..\src\LinkedList.c: In function 'll_sort':
-..\src\LinkedList.c:526:7: error: too few arguments to function 'll_set'
-  526 |       ll_set(this,i) = ll_get(this, j);
-      |       ^~~~~~
-..\src\LinkedList.c:186:5: note: declared here
-  186 | int ll_set(LinkedList* this, int index,void* pElement)
-      |     ^~~~~~
-..\src\LinkedList.c:527:7: error: too few arguments to function 'll_set'
-  527 |       ll_set(this, j)= auxElement;
-      |       ^~~~~~
-..\src\LinkedList.c:186:5: note: declared here
-  186 | int ll_set(LinkedList* this, int index,void* pElement)
-      |     ^~~~~~
-..\src\LinkedList.c:538:7: error: too few arguments to function 'll_set'
-  538 |       ll_set(this,i) = ll_get(this, j);
-      |       ^~~~~~
-..\src\LinkedList.c:186:5: note: declared here
-  186 | int ll_set(LinkedList* this, int index,void* pElement)
-      |     ^~~~~~
-..\src\LinkedList.c:539:7: error: too few arguments to function 'll_set'
-  539 |       ll_set(this, j)= auxElement;
-      |       ^~~~~~
-..\src\LinkedList.c:186:5: note: declared here
-  186 | int ll_set(LinkedList* this, int index,void* pElement)
-      |     ^~~~~~
-13:59:47 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-14:02:23 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-14:03:09 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-14:05:05 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-14:06:32 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-14:07:29 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-14:07:53 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-14:11:30 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-14:15:04 **** Rebuild of configuration Debug for project Labo1 Tp2 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+..\src\Controller.c: In function 'controller_putInDisEmployee':
+..\src\Controller.c:562:14: warning: unused variable 'pArrayListEmployee2' [-Wunused-variable]
+  562 |  LinkedList* pArrayListEmployee2=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
+23:08:24 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Employee.o" "..\\src\\Employee.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo1 Tp2.o" "..\\src\\Labo1 Tp2.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\UTN.o" "..\\src\\UTN.c" 
-gcc -o "Labo1 Tp2.exe" "src\\Employee.o" "src\\Labo1 Tp2.o" "src\\UTN.o" 
-14:15:06 **** Rebuild of configuration Debug for project Labo1 Tp3 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+..\src\Controller.c: In function 'controller_putInDisEmployee':
+..\src\Controller.c:562:14: warning: unused variable 'pArrayListEmployee2' [-Wunused-variable]
+  562 |  LinkedList* pArrayListEmployee2=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
+23:08:43 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o UTN.o "..\\UTN.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Menu.o "..\\Menu.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Employee.o "..\\Employee.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
-gcc "-LC:\\Users\\orne_\\eclipse-TpsLabo1\\Labo1 Tp3" -o "Labo1 Tp3.exe" Controller.o Employee.o Menu.o UTN.o main.o parser.o -lLinkedList 
-14:15:09 **** Rebuild of configuration Debug for project Labo1Tp1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\calculos.o" "..\\src\\calculos.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo1Tp1.o" "..\\src\\Labo1Tp1.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesUTNyMenu.o" "..\\src\\funcionesUTNyMenu.c" 
-gcc -o Labo1Tp1.exe "src\\Labo1Tp1.o" "src\\calculos.o" "src\\funcionesUTNyMenu.o" 
-Info: Nothing to build for likedList
-14:16:20 **** Incremental Build of configuration Debug for project likedList ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+..\src\Controller.c: In function 'controller_putInDisEmployee':
+..\src\Controller.c:562:14: warning: unused variable 'pArrayListEmployee2' [-Wunused-variable]
+  562 |  LinkedList* pArrayListEmployee2=NULL;
+      |              ^~~~~~~~~~~~~~~~~~~
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
+23:14:16 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-14:18:31 **** Incremental Build of configuration Debug for project likedList ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Employee.o" "..\\src\\Employee.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
+23:17:52 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
+23:33:04 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-14:22:40 **** Incremental Build of configuration Debug for project likedList ****
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
+23:33:57 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-14:24:02 **** Incremental Build of configuration Debug for project likedList ****
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
+23:41:36 **** Incremental Build of configuration Debug for project Labo1 Tp4 con LinkedList propia ****
 Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Menu.o" "..\\src\\Menu.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-15:28:25 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-15:31:21 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-..\src\LinkedList.c: In function 'll_sort':
-..\src\LinkedList.c:511:9: warning: unused variable 'flag' [-Wunused-variable]
-  511 |     int flag;
-      |         ^~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-15:31:51 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-19:30:07 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-20:10:19 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-20:22:27 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-20:48:19 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-20:56:42 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-20:57:04 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-21:37:25 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-21:42:33 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-21:44:10 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-Info: Nothing to build for likedList
-21:46:34 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-..\src\LinkedList.c: In function 'll_sort':
-..\src\LinkedList.c:491:11: warning: unused variable 'auxElement' [-Wunused-variable]
-  491 |     void* auxElement=NULL;
-      |           ^~~~~~~~~~
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-Info: Nothing to build for likedList
-Info: Nothing to build for likedList
-21:47:53 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-..\src\LinkedList.c: In function 'll_sort':
-..\src\LinkedList.c:491:11: warning: unused variable 'auxElement' [-Wunused-variable]
-  491 |     void* auxElement=NULL;
-      |           ^~~~~~~~~~
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
-21:48:46 **** Incremental Build of configuration Debug for project likedList ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -o likedList "src\\LinkedList.o" "src\\main.o" "testing\\src\\Employee.o" "testing\\src\\addNodeTest.o" "testing\\src\\addTest.o" "testing\\src\\clearTest.o" "testing\\src\\cloneTest.o" "testing\\src\\containsAllTest.o" "testing\\src\\containsTest.o" "testing\\src\\deleteLinkedListTest.o" "testing\\src\\getNodeTest.o" "testing\\src\\getTest.o" "testing\\src\\indexOfTest.o" "testing\\src\\isEmptyTest.o" "testing\\src\\lenTest.o" "testing\\src\\main_test.o" "testing\\src\\newTest.o" "testing\\src\\popTest.o" "testing\\src\\pushTest.o" "testing\\src\\removeTest.o" "testing\\src\\setTest.o" "testing\\src\\sortTest.o" "testing\\src\\subListTest.o" "testing\\utest.o" 
-Info: Nothing to build for likedList
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -o "Labo1 Tp4 con LinkedList propia.exe" "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\Menu.o" "src\\UTN.o" "src\\main.o" "src\\parser.o" 
+Info: Nothing to build for Labo1 Tp4 con LinkedList propia
