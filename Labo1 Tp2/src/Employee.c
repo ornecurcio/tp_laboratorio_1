@@ -57,8 +57,8 @@ int altaEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId)
 		}
 		else
 		{
-			if((utn_getNombre(aAuxiliar.lastName, "Ingrese Apellido", "Error\n", 3, 51)==0)&&
-			(utn_getNombre(aAuxiliar.name, "Ingrese Nombre", "Error\n", 3, 51)==0)&&
+			if((utn_getApellido(aAuxiliar.lastName, "Ingrese Apellido", "Error\n", 3, 51)==0)&&
+			(utn_getApellido(aAuxiliar.name, "Ingrese Nombre", "Error\n", 3, 51)==0)&&
 			(utn_getNumeroFlotante(&aAuxiliar.salary,"Ingrese salario","Error, ingrese salario entre 10000-60000\n",10000,60000,3)==0)&&
 			(utn_getNumero(&aAuxiliar.sector, "Ingrese sector","Error, ingrese sector de 1 a 3\n", 1, 3, 3)==0))
 			{
@@ -223,11 +223,11 @@ int modifica1Employee(eEmployee aAuxiliar[], int posicion)
 				printf("\n¿Desea modificar este empleado?");
 				if(utn_getCaracterSN()==0)
 				{
-					printf("\nDesea modificar \n1. Apellido\n2.Nombre\n3.Salario\n4.Sueldo");
+					printf("\nDesea modificar \n1. Apellido\n2.Nombre\n3.Salario\n4.Sector");
 					scanf("%d", &respuesta);
 					while(respuesta>4 || respuesta<1)
 					{
-						printf("\nDesea modificar \n1. Apellido\n2.Nombre\n3.Salario\n4.Sueldo");
+						printf("\nDesea modificar \n1. Apellido\n2.Nombre\n3.Salario\n4.Sector");
 						scanf("%d", &respuesta);
 					}
 					switch(respuesta)

@@ -90,3 +90,15 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Employee.o" "..\\src\\Employee.c" 
 gcc -o "Labo1 Tp2.exe" "src\\Employee.o" "src\\Labo1 Tp2.o" "src\\UTN.o" 
 Info: Nothing to build for Labo1 Tp2
+15:43:17 **** Incremental Build of configuration Debug for project Labo1 Tp2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\UTN.o" "..\\src\\UTN.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Employee.o" "..\\src\\Employee.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Labo1 Tp2.o" "..\\src\\Labo1 Tp2.c" 
+gcc -o "Labo1 Tp2.exe" "src\\Employee.o" "src\\Labo1 Tp2.o" "src\\UTN.o" 
+Info: Nothing to build for Labo1 Tp2
+15:55:22 **** Incremental Build of configuration Debug for project Labo1 Tp2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\UTN.o" "..\\src\\UTN.c" 
+gcc -o "Labo1 Tp2.exe" "src\\Employee.o" "src\\Labo1 Tp2.o" "src\\UTN.o" 
+Info: Nothing to build for Labo1 Tp2
