@@ -152,8 +152,8 @@ int bajaEmployee(eEmployee aAuxiliar[], int posicion)
 }
 int ordenarEmployees(eEmployee aEmpleado[], int cantidadDeArray, int criterio)
 {
-		int flagNoEstaOrdenado=1;
 		int i;
+		int flagNoEstaOrdenado=1;
 		eEmployee aux;
 		int retorno=-1;
 
@@ -233,12 +233,12 @@ int modifica1Employee(eEmployee aAuxiliar[], int posicion)
 					switch(respuesta)
 					{
 						case 1:
-							utn_getNombre(aAuxiliar[posicion].lastName, "Ingrese Apellido", "Error\n", 2, 51);
+							utn_getApellido(aAuxiliar[posicion].lastName, "Ingrese Apellido", "Error\n", 2, 51);
 							printf("Exito, los nuevos datos son: ");
 							imprimir1Employee(aAuxiliar[posicion]);
 							break;
 						case 2:
-							utn_getNombre(aAuxiliar[posicion].name, "Ingrese Nombre", "Error\n", 2, 51);
+							utn_getApellido(aAuxiliar[posicion].name, "Ingrese Nombre", "Error\n", 2, 51);
 							printf("Exito, los nuevos datos son: ");
 							imprimir1Employee(aAuxiliar[posicion]);
 							break;
