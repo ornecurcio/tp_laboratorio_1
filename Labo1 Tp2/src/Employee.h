@@ -57,6 +57,6 @@ int modifica1Employee(eEmployee aAuxiliar[], int posicion);
 
 int eEmployeePromSalario(float* pPromedioResultado, eEmployee array[], int cantidadDeArray);
 
-int eEmployeesListaSalario(eEmployee array[], int cantidadDeArray, float salary);
+int eEmployeesListaSalario(eEmployee array[], int cantidadDeArray, float salary, int* cantidad);
 
 #endif /* EMPLOYEE_H_ */

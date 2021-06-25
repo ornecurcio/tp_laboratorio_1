@@ -24,11 +24,12 @@ int main(void) {
 	int auxInt;
 	int respuestaMenuPrincipal;
 	float auxFloat;
+	int cantidad=0;
 
 	inicializarEmpleado(vecEmpleados, QTY_EMPLOYEE);
 	do{
 		if(utn_getNumero(&respuestaMenuPrincipal,"Seleccione una opcion\n1.Ingresar 1 Empleado\n2.Modificar\n3.Dar de baja\n4.Informes\n5.Salir\n",
-				"Error ingrese: \n1.Ingresar un empleado\n2.Modificar\n3.Dar de baja\n4.Informes\n5.Salir", 1, 5, 2)==0)
+				"Error: \n", 1, 5, 2)==0)
 		{
 			switch(respuestaMenuPrincipal)
 			{
@@ -41,7 +42,7 @@ int main(void) {
 				case 2://MODIFICAR
 					if(contadorEmpleados==0)
 					{
-						printf("Error, primero debe ingresar un empleado");
+						printf("Error, primero debe ingresar un empleado\n");
 					}
 					else
 					{
@@ -51,7 +52,7 @@ int main(void) {
 				case 3://BAJA
 					if(contadorEmpleados==0)
 					{
-						printf("Error, primero debe ingresar un empleado");
+						printf("Error, primero debe ingresar un empleado\n");
 					}
 					else
 					{
@@ -61,7 +62,7 @@ int main(void) {
 				case 4:
 					if(contadorEmpleados==0)
 					{
-						printf("Error, primero debe ingresar un empleado");
+						printf("Error, primero debe ingresar un empleado\n");
 					}
 					else
 					{
@@ -78,7 +79,8 @@ int main(void) {
 											break;
 										case 2:
 											eEmployeePromSalario(&auxFloat, vecEmpleados, QTY_EMPLOYEE);
-											eEmployeesListaSalario(vecEmpleados, QTY_EMPLOYEE, auxFloat);
+											eEmployeesListaSalario(vecEmpleados, QTY_EMPLOYEE, auxFloat, &cantidad);
+											printf("\nSuperan el promedio: %d", cantidad);
 											break;
 									 }
 							  }

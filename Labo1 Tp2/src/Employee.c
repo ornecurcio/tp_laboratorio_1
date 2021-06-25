@@ -57,10 +57,10 @@ int altaEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId)
 		}
 		else
 		{
-			if((utn_getNombre(aAuxiliar.lastName, "Ingrese Apellido", "Error, ingrese Apellido", 2, 51)==0)&&
-			(utn_getNombre(aAuxiliar.name, "Ingrese Nombre", "Error, ingrese Nombre", 2, 51)==0)&&
-			(utn_getNumeroFlotante(&aAuxiliar.salary,"Ingrese salario","Error, ingrese salario entre 300-3000",300,3000,2)==0)&&
-			(utn_getNumero(&aAuxiliar.sector, "Ingrese sector","Error, ingrese sector de 1 a 20", 1, 20, 2)==0))
+			if((utn_getNombre(aAuxiliar.lastName, "Ingrese Apellido", "Error\n", 3, 51)==0)&&
+			(utn_getNombre(aAuxiliar.name, "Ingrese Nombre", "Error\n", 3, 51)==0)&&
+			(utn_getNumeroFlotante(&aAuxiliar.salary,"Ingrese salario","Error, ingrese salario entre 10000-60000\n",10000,60000,3)==0)&&
+			(utn_getNumero(&aAuxiliar.sector, "Ingrese sector","Error, ingrese sector de 1 a 3\n", 1, 3, 3)==0))
 			{
 				aAuxiliar.idEmployee=0;
 				printf("Estos son los datos, desea continuar:");
@@ -71,6 +71,7 @@ int altaEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId)
 				   aAuxiliar.idEmployee=*contadorId;
 				   aAuxiliar.isEmpty=0;
 				   aEmployee[posicion]=aAuxiliar;
+				   imprimir1Employee(aEmployee[posicion]);
 				   retorno=0;
 				}
 			}
@@ -151,7 +152,7 @@ int bajaEmployee(eEmployee aAuxiliar[], int posicion)
 }
 int ordenarEmployees(eEmployee aEmpleado[], int cantidadDeArray, int criterio)
 {
-		int flagDesordenado = -1;
+		int flagNoEstaOrdenado=1;
 		int i;
 		eEmployee aux;
 		int retorno=-1;
@@ -159,54 +160,54 @@ int ordenarEmployees(eEmployee aEmpleado[], int cantidadDeArray, int criterio)
 		if(aEmpleado!=NULL && cantidadDeArray>0)
 		{
 			do {
-				flagDesordenado=0;
+				flagNoEstaOrdenado=0;
 				for (i = 0; i < cantidadDeArray-1; i++)
 				{
-					if(criterio == 0)
+					if(criterio == 1)
 					{
 							if(strcmp(aEmpleado[i].lastName,aEmpleado[i+1].lastName)>0)
 							{
-								flagDesordenado=1;
 								aux=aEmpleado[i];
 								aEmpleado[i]=aEmpleado[i+1];
 								aEmpleado[i+1]=aux;
+								flagNoEstaOrdenado=1;
 							}
 							else
 							{
 									if(strcmp(aEmpleado[i].lastName,aEmpleado[i+1].lastName)==0 && aEmpleado[i].sector > aEmpleado[i+1].sector)
 									{
-										flagDesordenado=1;
 										aux=aEmpleado[i];
 										aEmpleado[i]=aEmpleado[i+1];
 										aEmpleado[i+1]=aux;
+										flagNoEstaOrdenado=1;
 									}
 							}
 						}
 						else
 						{
-							if(criterio == 1)
+							if(criterio == 0)
 							{
 								if(strcmp(aEmpleado[i+1].lastName,aEmpleado[i].lastName)>0)
 								{
-									flagDesordenado=1;
 									aux=aEmpleado[i];
 									aEmpleado[i]=aEmpleado[i+1];
 									aEmpleado[i+1]=aux;
+									flagNoEstaOrdenado=1;
 								}
 								else
 								{
 									if(strcmp(aEmpleado[i].lastName,aEmpleado[i+1].lastName)==0 && aEmpleado[i+1].sector > aEmpleado[i].sector)
 									{
-										flagDesordenado=1;
 										aux=aEmpleado[i];
 										aEmpleado[i]=aEmpleado[i+1];
 										aEmpleado[i+1]=aux;
+										flagNoEstaOrdenado=1;
 									}
 								}
 							}
 						}
 					}
-				} while (flagDesordenado==0);
+				} while (flagNoEstaOrdenado==1);
 				retorno=0;
 		}
 		return retorno;
@@ -232,23 +233,23 @@ int modifica1Employee(eEmployee aAuxiliar[], int posicion)
 					switch(respuesta)
 					{
 						case 1:
-							utn_getString(aAuxiliar[posicion].lastName, "Ingrese Apellido", "Error, ingrese Apellido", 1);
+							utn_getNombre(aAuxiliar[posicion].lastName, "Ingrese Apellido", "Error\n", 2, 51);
 							printf("Exito, los nuevos datos son: ");
 							imprimir1Employee(aAuxiliar[posicion]);
 							break;
 						case 2:
-							utn_getString(aAuxiliar[posicion].name, "Ingrese Nombre", "Error, ingrese Nombre", 1);
+							utn_getNombre(aAuxiliar[posicion].name, "Ingrese Nombre", "Error\n", 2, 51);
 							printf("Exito, los nuevos datos son: ");
 							imprimir1Employee(aAuxiliar[posicion]);
 							break;
 						case 3:
-							utn_getNumeroFlotante(&aAuxiliar[posicion].salary,"Ingrese salario","Error, ingrese salario entre 300-3000",300,3000,1);
+							utn_getNumeroFlotante(&aAuxiliar[posicion].salary,"Ingrese salario","Error, ingrese salario entre 10000-60000",10000,60000,2);
 							printf("Exito, los nuevos datos son: ");
 							imprimir1Employee(aAuxiliar[posicion]);
 							break;
 						case 4:
 							utn_getNumero(&aAuxiliar[posicion].sector, "Ingrese sector: 1.ADMISION, 2.SEGURIDAD, 3.ADMINISTRACION",
-									"Error, ingrese: 1.Admision, 2.Seguridad, 3.Administracion", 1, 3, 1);
+									"Error, ingrese: 1.Admision, 2.Seguridad, 3.Administracion", 1, 3, 2);
 							printf("Exito, los nuevos datos son: ");
 							imprimir1Employee(aAuxiliar[posicion]);
 							break;
@@ -271,17 +272,18 @@ int eEmployeePromSalario(float* pPromedioResultado, eEmployee array[], int canti
 		{
 			if(array[i].isEmpty==0)
 			{
-			acumulador =+ array[i].salary;
-			contador++;
+				acumulador=acumulador+array[i].salary;
+				contador++;
 			}
 		}
-		*pPromedioResultado = acumulador/contador;
-		printf("El salario promedio es: %.2f", *pPromedioResultado);
+		*pPromedioResultado = (float)acumulador/contador;
+		printf("El Total de salario es: %d\n", acumulador);
+		printf("El salario promedio es: %.2f\n", *pPromedioResultado);
 		retorno = 0;
 	}
 	return retorno;
 }
-int eEmployeesListaSalario(eEmployee array[], int cantidadDeArray, float salary)
+int eEmployeesListaSalario(eEmployee array[], int cantidadDeArray, float salary, int* cantidad)
 {
 	int retorno=-1;
 	int i;
@@ -290,14 +292,19 @@ int eEmployeesListaSalario(eEmployee array[], int cantidadDeArray, float salary)
 	{
 		for(i=0; i<cantidadDeArray; i++)
 		{
-			if(array[i].isEmpty==0)
+			if(array[i].isEmpty==0 && array[i].salary>=salary)
 			{
-				if(array[i].salary>=salary)
-				{
-					imprimir1Employee(array[i]);
-				}
+				(*cantidad)++;
+				imprimir1Employee(array[i]);
 			}
 		}
+//		for(i=0; i<cantidadDeArray; i++)
+//		{
+//			if(array[i].isEmpty==0 && array[i].salary>=salary)
+//			{
+//				imprimir1Employee(array[i]);
+//			}
+//		}
 	}
 
 	return retorno;
