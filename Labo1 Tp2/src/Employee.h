@@ -44,19 +44,42 @@ int altaEmployee(eEmployee aEmployee[], int cantidadDeArray, int* contadorId);
 * \param aEmpleado, recibe por valor la estructura de un empleado
 */
 void imprimir1Employee(eEmployee aEmpleado);
-
+/** \brief busca un empleado por ID
+* \param aAuxiliar, array de empleados
+* \param cantidadDeArray, cantidad de array a recorrer
+*/
 int buscaEmployeeById(eEmployee aAuxiliar[], int cantidadDeArray);
-
+/** \brief da de baja un empleado
+* \param aAuxiliar, array de empleados
+* \param posicion, a bar de baja
+*/
 int bajaEmployee(eEmployee aAuxiliar[], int posicion);
-
+/** \brief ordena los empleados
+* \param aAuxiliar, array de empleados
+* \param cantidadDeArray, cantidad de array a recorrer
+* \param criterio de ordenamiento
+*/
 int ordenarEmployees(eEmployee array[], int cantidadDeArray, int criterio);
-
+/** \brief imprime listado de empleados
+* \param cantidadDeArray, cantidad de array a recorrer
+*/
 int imprimirEmployees(eEmployee array[], int cantidadDeArray);
-
+/** \brief modifica un empleado
+* \param posicion, a modificar
+*/
 int modifica1Employee(eEmployee aAuxiliar[], int posicion);
-
+/** \brief calcula el total de todos los salarios y el salario promedio
+* \param array
+* \param cantidadDeArray
+* \param puntero pPromedioResultado donde se guarda el salario promedio
+*/
 int eEmployeePromSalario(float* pPromedioResultado, eEmployee array[], int cantidadDeArray);
-
+/** \brief lista y cuanta la cantida de salarios mayores al promedio
+* \param array
+* \param cantidadDeArray
+* \param salary
+* \param puntero cantidad donde se guarda la cantidad de empleados con salio superior al promedio
+*/
 int eEmployeesListaSalario(eEmployee array[], int cantidadDeArray, float salary, int* cantidad);
 
 #endif /* EMPLOYEE_H_ */
