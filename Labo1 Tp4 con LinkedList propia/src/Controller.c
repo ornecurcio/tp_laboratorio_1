@@ -187,7 +187,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 					pAuxEmpleado=employee_new();
 					if(pAuxEmpleado!=NULL)
 					{
-						if(utn_getNombre(auxNombre, "Ingrese nombre del empleado", "Error ingrese nombre valido\n", 2, 128)==0 &&
+						if(utn_getApellido(auxNombre, "Ingrese nombre del empleado", "Error ingrese nombre valido\n", 2, 128)==0 &&
 						   utn_getNumero(&auxHoras, "Ingrese horas trabajadas", "Error ingrese numero valido, maximo 745\n", 0, 745, 2)==0 &&
 						   utn_getNumero(&auxSueldo, "Ingrese sueldo", "Error ingrese numero valido, maximo 999999\n", 0, 999999, 2)==0)
 						{
@@ -283,7 +283,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
 					switch(auxInt)
 					{
 						case 1:
-							if((utn_getNombre(auxNombre, "Ingrese nombre del empleado", "Error, ingrese Nombre valido\n", 2, 128)==0) &&
+							if((utn_getApellido(auxNombre, "Ingrese nombre del empleado", "Error, ingrese Nombre valido\n", 2, 128)==0) &&
 							  (employee_setNombre(pAuxEmpleado, auxNombre)==0))
 							{
 								printf("Datos modificados correctamente\n");
@@ -354,7 +354,10 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 				}
 			}
 		}
-		printf("Empleado no encontrado\n");
+		if(retorno==-1)
+		{
+			printf("Empleado no encontrado\n");
+		}
 	}
     return retorno;
 }
@@ -396,9 +399,9 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
 				else
 				{
 					printf("%-5d		%-15s		%4d			%-10d\n",auxId, auxNombre, auxHoras, auxSueldo);
-					retorno=0;
 				}
 			}
+			retorno = 0;
 		}
 		else
 		{
@@ -554,26 +557,5 @@ int controller_deleteLinkedList(LinkedList* pArrayListEmployee)
 		}
 	}
 	return retorno;
-}
-int controller_putInDisEmployee(LinkedList* pArrayListEmployee)
-{
-	int retorno=-1;
-	int option;
-	void (*pFunc)(void* element);
-	if(pArrayListEmployee!=NULL)
-	{
-		utn_getNumero(&option, "-----APLICAR-----\n1. Aumento 10% en mas 20000 \n2. Descuento 10% en mas 50000 \n", "Error, opcion incorrecta\n", 1, 2, 2);
-		switch(option)
-		{
-			case 1:
-				pFunc=employee_putIn;
-				break;
-			case 2:
-				pFunc=employee_putDis;
-				break;
-		}
-		//pArrayListEmployee=ll_map(pArrayListEmployee, pFunc);
-		ll_map(pArrayListEmployee, pFunc);
-	}
-    return retorno;
+
 }

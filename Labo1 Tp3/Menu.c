@@ -8,7 +8,6 @@ int menu(void)
 {
 		int option;
 	    int flag=0;
-	    char path[30];
 	    int flag2=0;
 	    LinkedList* listaEmpleados = ll_newLinkedList();
 	    printf("------------ /BIENVENIDO/ -------------\n");
@@ -86,7 +85,7 @@ int menu(void)
 						}
 						break;
 					case 8:
-						utn_getNumero(&flag2, "Desea guardar en: \n1. data.csv \n2. Chequeo.csv \n3. Nuevo archivo", "Error, opcion incorrecta", 1, 3, 1);
+						utn_getNumero(&flag2, "Desea guardar en: \n1. data.csv \n2. Chequeo.csv", "Error, opcion incorrecta", 1, 2, 1);
 						switch(flag2)
 						{
 						case 1:
@@ -95,20 +94,10 @@ int menu(void)
 						case 2:
 							controller_saveAsText("Chequeo.csv",listaEmpleados);
 							break;
-						case 3:
-							if((utn_getArchivo(path, "Ingrese nombre de archivo","Error, no es valido caracter especial, no olvide el .csv o .txt", 2, 30))==0)
-							{
-							controller_saveAsText(path,listaEmpleados);
-							}
-							else
-							{
-								flag2=0;
-							}
-							break;
 						}
 						break;
 					case 9:
-						utn_getNumero(&flag2, "Desea guardar en: \n1. data.bin \n2. Chequeo.bin \n3. Nuevo archivo", "Error, opcion incorrecta", 1, 3, 1);
+						utn_getNumero(&flag2, "Desea guardar en: \n1. data.bin \n2. Chequeo.bin", "Error, opcion incorrecta", 1, 2, 1);
 						switch(flag2)
 						{
 						case 1:
@@ -116,16 +105,6 @@ int menu(void)
 							break;
 						case 2:
 							controller_saveAsBinary("Chequeo.bin",listaEmpleados);
-							break;
-						case 3:
-							if((utn_getArchivo(path, "Ingrese nombre de archivo","Error, no es valido caracter especial, no olvide el .bin", 2, 30))==0)
-							{
-								controller_saveAsBinary(path,listaEmpleados);
-							}
-							else
-							{
-								flag2=0;
-							}
 							break;
 						}
 						break;
@@ -136,6 +115,10 @@ int menu(void)
 							if(utn_getCaracterSN()==0)
 							{
 								controller_deleteLinkedList(listaEmpleados);
+							}
+							else
+							{
+								option=11;
 							}
 						}
 						else

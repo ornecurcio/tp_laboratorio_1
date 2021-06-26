@@ -30,7 +30,4 @@ int employee_sortId(void* thisOne, void* thisTwo);
 int employee_sortSueldo(void* thisOne, void* thisTwo);
 int employee_sortHoras(void* thisOne, void* thisTwo);
 int employee_sortNombre(void* thisOne, void* thisTwo);
-
-void employee_putIn(void* this);
-void employee_putDis(void* this);
 #endif // employee_H_INCLUDED

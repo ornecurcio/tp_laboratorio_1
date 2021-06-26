@@ -202,21 +202,4 @@ int employee_sortNombre(void* thisOne, void* thisTwo)
 	}
 	return retorno;
 }
-void employee_putIn(void* this)
-{
-	int auxSueldo;
-	if(employee_getSueldo((Employee*)this, &auxSueldo)==0 && auxSueldo>20000)
-	{
-		auxSueldo=auxSueldo+(10*auxSueldo/100);
-		employee_setSueldo(this, auxSueldo);
-	}
-}
-void employee_putDis(void* this)
-{
-	int auxSueldo;
-	if(employee_getSueldo((Employee*)this, &auxSueldo)==0 && auxSueldo>50000)
-	{
-		auxSueldo=auxSueldo-(10*auxSueldo/100);
-		employee_setSueldo(this, auxSueldo);
-	}
-}
+

@@ -70,40 +70,18 @@ int inicializarArrayCadena(char pArray[][20], int cantidadDeArray);
 int utn_SwapAscendiente(int listaDeArray[],int cantidadDeArray);
 int utn_getString(char aux[],char* mensaje,char* mensajeError, int reintentos);
 /**
- * \brief 	Verifica una cadena recibida como parametro para determinar si es un nombre valido
+ * \brief 	Verifica una cadena recibida como parametro para determinir
+ * 			si es un nombre valido
  * \param char* cadena, Cadena a analizar
  * \param int longitud, indica la cantidad de letras maxima de la cadena
- * \return (0) Indicar que NO valido / (1) Indica que que es TODO OK nombre valido
+ * \return (0) Indicar que no es un nombre valido / (1) Indica que que es un nombre valido
+ *
  */
 int esNombre(char* cadena,int longitud);
 /**
- * \brief valida que la cadena obtenida sea un formato CUIT xx-xxxxxxxx-x
- * \param cadena es un puntero al espacio de memoria donde se dejara el resultado de la funcion
- * return Retorna 0 sin error, -1, SI ES ERROR.
- */
-int esCUIT(char* cadena);
-/**
- * \brief valida que la cadena obtenida sean solo letras
- * \param cadena es un puntero al espacio de memoria donde se dejara el resultado de la funcion
- * return Retorna 0 sin error, -1, SI ES ERROR.
- */
-int esSoloLetra(char *pResultado) ;
-/**
- * \brief valida que la cadena obtenida sea o letras o espacio, en caso de nombres propios compuestos.
- * \param cadena es un puntero al espacio de memoria donde se dejara el resultado de la funcion
- * return Retorna 0 sin error, -1, SI ES ERROR.
- */
-int esLetraConEspacio(char *pResultado);
-/**
- * \brief valida que la cadena obtenida sea un telefono valido
- * \param cadena es un puntero al espacio de memoria donde se dejara el resultado de la funcion
- * return Retorna 0 sin error, -1, SI ES ERROR.
- */
-int esTelefono(char* cadena);
-/**
  * \brief valida que la cadena obtenida es Nombre
  * \param cadena es un puntero al espacio de memoria donde se dejara el resultado de la funcion
- * return Retorna 0 sin error, -1, SI ES ERROR.
+ * return Retorna 0 si el numero es flotante, -1, SI ES ERROR.
  */
 int getNombre(char* pResultado, int longitud);
 /**
@@ -117,7 +95,52 @@ int getNombre(char* pResultado, int longitud);
  */
 int utn_getNombre(char* pResultado, char* mensaje, char* mensajeError,int reintentos, int longitud);
 /**
- * \brief Solicita un numero de telefono al usuario
+ * \brief valida que la cadena son solo letras
+ * \param cadena es un puntero al espacio de memoria donde se dejara el resultado de la funcion
+ * return Retorna 1 si todo ok, 0, SI ES ERROR.
+ */
+int esSoloLetra(char *pResultado) ;
+/**
+ * \brief valida que la cadena son solo letras y espacio en el medio
+ * \param cadena es un puntero al espacio de memoria donde se dejara el resultado de la funcion
+ * return Retorna 1 si todo ok, 0, SI ES ERROR.
+ */
+int esLetraConEspacio(char *pResultado);
+/**
+ * \brief valida numero de telefono se acepta - y espacio
+ * \param cadena es un puntero al espacio de memoria donde se dejara el resultado de la funcion
+ * return Retorna 1 si todo ok, 0, SI ES ERROR.
+ */
+int esTelefonoValido(char* cadena);
+/**
+ * \brief Solicita un telefono al usuario
+ * \param char* pResultado, puntero al espacio de memoria donde se dejara el valor obtenido
+ * \param char* mensaje, Es el mensaje a ser mostrado al usuario
+ * \param char* mensaje, Es el mensaje de error a ser mostrado al usuario
+ * \param minSize, cantidad minima de numero
+ * \param maxSize, cantidad maxima de numero
+ * \param int reintentos, cantidad de oportunidades para ingresar el dato
+ * \param int min, numero minimo,
+ * \param int max, numero maximo,
+ * \return (-1) Error / (0) Ok
+ */
+int utn_getTelefono(char* pResultado, char* mensaje, char* mensajeError, int minSize, int maxSize, int min, int max, int reintentos);
+/**
+ * \brief valida apellido con caracter especial y espacio
+ * \param cadena es un puntero al espacio de memoria donde se dejara el resultado de la funcion
+ * \param longitud maxima
+ * return Retorna 1 si todo ok, 0, SI ES ERROR.
+ */
+int esApellido(char* cadena,int longitud);
+/**
+ * \brief valida apellido con caracter especial y espacio y da formato
+ * \param cadena es un puntero al espacio de memoria donde se dejara el resultado de la funcion
+ * \param longitud maxima
+ * return Retorna 0 si todo ok, -1, SI ES ERROR.
+ */
+int getApellido(char* pResultado, int longitud);
+/**
+ * \brief Solicita un apellido al usuario
  * \param char* pResultado, puntero al espacio de memoria donde se dejara el valor obtenido
  * \param char* mensaje, Es el mensaje a ser mostrado al usuario
  * \param char* mensaje, Es el mensaje de error a ser mostrado al usuario
@@ -125,9 +148,27 @@ int utn_getNombre(char* pResultado, char* mensaje, char* mensajeError,int reinte
  * \param int limite, indica la cantidad de letras maxima del nombre
  * \return (-1) Error / (0) Ok
  */
-int utn_getTelefono(char* pResultado, char* mensaje, char* mensajeError, int minSize, int maxSize, int min, int max, int reintentos);
+int utn_getApellido(char* pResultado, char* mensaje, char* mensajeError,int reintentos, int longitud);
 /**
- * \brief Solicita un CUIT al usuario de forma xx-xxxxxxxxx-x
+ * \brief da formato a un apellido/nombre, coloca la primer letra en mayuscula
+ * \param puntero a string
+ */
+void daFormaApellido(char* pResultado);
+/**
+ * \brief da formato a un apellido/nombre, y concatena
+ * \param puntero a string
+ * \param puntero a string
+ * \param puntero a guardar nombre y apellido con formato
+ */
+void FormaApellidoNombre(char *pNombre, char *pApellido, char *pCompleto);
+/**
+ * \brief valida cuit especial -
+ * \param cadena
+ * return Retorna 0 si todo ok, -1, SI ES ERROR.
+ */
+int esCUIT(char* cadena);
+/**
+ * \brief Solicita un cuit al usuario
  * \param char* pResultado, puntero al espacio de memoria donde se dejara el valor obtenido
  * \param char* mensaje, Es el mensaje a ser mostrado al usuario
  * \param char* mensaje, Es el mensaje de error a ser mostrado al usuario
@@ -136,26 +177,18 @@ int utn_getTelefono(char* pResultado, char* mensaje, char* mensajeError, int min
  */
 int utn_getCUIT(char* pResultado, char* mensaje, char* mensajeError, int reintentos);
 /**
- * \brief Solicita un nombre al usuario
- * \param char* pResultado, puntero al espacio de memoria donde se dejara el valor obtenido
- * \param char* mensaje, Es el mensaje a ser mostrado al usuario
- * \param char* mensaje, Es el mensaje de error a ser mostrado al usuario
- * \param int reintentos, cantidad de oportunidades para ingresar el dato
- * \param int limite, indica la cantidad de letras maxima del nombre
- * \return (-1) Error / (0) Ok
- */
-void FormaApellidoNombre(char *pNombre, char *pApellido, char *pCompleto);
-/**
- * \brief Solicita un nombre al usuario
- * \param char* pResultado, puntero al espacio de memoria donde se dejara el valor obtenido
- * \param char* mensaje, Es el mensaje a ser mostrado al usuario
- * \param char* mensaje, Es el mensaje de error a ser mostrado al usuario
- * \param int reintentos, cantidad de oportunidades para ingresar el dato
- * \param int limite, indica la cantidad de letras maxima del nombre
- * \return (-1) Error / (0) Ok
+ * \brief pregunta de validacion si/no al usuario
+ * return Retorna 0 si si.
  */
 int utn_getCaracterSN(void);
-int esArchivo(char* cadena);
-int esArchivoCsv(char* cadena);
-int utn_getArchivo(char* pResultado, char* mensaje, char* mensajeError, int reintentos, int longitud);
+/**
+ * \brief da formato a un apellido/nombre, coloca la primer letra en mayuscula
+ * \param puntero a string
+ */
+void daFormaNombre(char *pResultado);
+/**
+ * \brief solicita un nombre de archivo al usuario
+ * return (-1) Error / (0) Ok
+ */
+int utn_getArchivo(char* path);
 #endif /* UTN_H_ */
